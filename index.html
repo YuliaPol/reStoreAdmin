@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reStore</title>
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link href="./css/menu-style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <div class="mobile-menu btn-aside-menu toggle-sidebar">
+                    <div class="b-menu">
+                        <div class="b-bun b-bun--top"></div>
+                        <div class="b-bun b-bun--mid"></div>
+                        <div class="b-bun b-bun--bottom"></div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="/admin">
+                        <img src="./img/logo.jpg" alt="reStore">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li class="treeview active">
+                                <a href="./index.html">
+                                    <div class="icon icon-chart"></div>
+                                    Опрос по рознице
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="./index.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <div class="icon icon-rocket"></div>
+                                    Опрос по доставке
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-file"></div>
+                                    Опрос b2b
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-card"></div>
+                                    Опрос АСЦ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="page-content">
+                <div class="pink-block">
+                    <div class="page-header">
+                        Опрос по рознице / Ключевые показатели
+                    </div>
+                    <form action="#" method="get" data-pjax="1">
+                        <div class="filter-wrapper">
+                            <!-- блок выбора даты -->
+                            <div class="box box-date">
+                                <h6>Период</h6>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="13-04-2021 - 13-05-2021">
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+        
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+    
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+    
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+    
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <input type="hidden" value=""/>
+                        </div>
+                    </form>
+                </div>
+                <div class="box-wrapper nps-row">
+                    <h3>
+                        NPS
+                    </h3>
+                    <div class="main-nps">
+                        <div>
+                            <table class="block-table table-striped" id="faceectable">
+                                <tbody>
+                                    <tr>
+                                        <td class="cntr_num" colspan="7">
+                                            DETRACTORS
+                                        </td>
+                                        <td class="cntr_num" colspan="2">
+                                            PASSIVES
+                                        </td>
+                                        <td class="cntr_num" colspan="2">
+                                            PROMOTERS
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cntr_num" colspan="7">
+                                            <div class="planka-long"></div>
+                                        </td>
+                                        <td class="cntr_num" colspan="2">
+                                            <div class="planka-long"></div>
+                                        </td>
+                                        <td class="cntr_num" colspan="2">
+                                            <div class="planka-long"></div>
+                                        </td>
+                                    </tr>
+                                    <tr class="rate-th">
+                                        <td>
+                                            <div class="rate-item">0</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">1</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">2</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">3</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">4</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">5</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">6</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">7</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">8</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">9</div>
+                                        </td>
+                                        <td>
+                                            <div class="rate-item">1</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="dig-td">
+                                        <td>
+                                            <p class="sum-bot">24</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">43</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">1</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">32</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">52</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">23</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">43</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">22</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">23</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">331</p>
+                                        </td>
+                                        <td>
+                                            <p class="sum-bot">439</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="left-block">
+                            <div class="promot-wrap">
+                                <div class="label-promot">
+                                    <div class="table-txt11-sp">35</div>
+                                    <div class="table-txt12-sp">Promoters</div>
+                                    <div class="table-txt13-sp">45.5%</div>
+                                </div>
+                                <div class="label-promot">
+                                    <div class="table-txt11-sp">77</div>
+                                    <div class="table-txt12-sp">Passives</div>
+                                    <div class="table-txt13-sp">33.56%</div>
+                                </div>
+                                <div class="label-promot">
+                                    <div class="table-txt11-sp">13</div>
+                                    <div class="table-txt12-sp">Detractors</div>
+                                    <div class="table-txt13-sp">45.55%</div>
+                                </div>
+                            </div>
+                            <div class="block-circle">
+                                <div class="circle">
+                                    <span>Total</span>
+                                    <span>476</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-row">
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Каким образом началось Ваше общение с сотрудниками магазина?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lineDot">
+                                <div class="chart">
+                                    <div class="chart-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Как проходил выбор товара?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lineDot">
+                                <div class="chart">
+                                    <div class="chart-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-row">
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Как происходило знакомство с устройством?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lineDot">
+                                <div class="chart">
+                                    <div class="chart-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Рассказал ли сотрудник о возможностях других товаров и сервисов?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lineDot">
+                                <div class="chart">
+                                    <div class="chart-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-row">
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Как завершилось взаимодействие с сотрудником?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lineDot">
+                                <div class="chart">
+                                    <div class="chart-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollup">
+        <div class="arrow-wrap">
+            <div class="icon-arrow"></div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/daterangepicker.js"></script>
+    <script>
+        //data for shart
+        let chartData = [
+            {
+                element: '.chart-1', // class for element
+                type: 'lineDot',               //type of chart
+                dotColor: '#FFD1E2',
+                data: [                          //data      
+                    {
+                        backgroundStart: "#FD2679",
+                        backgroundEnd: "#FFD1E2",
+                        progress: "45",
+                        labelText: "Сотрудник магазина сам инициировал общение и был активен"
+                    },
+                    {
+                        backgroundStart: "#FD2679",
+                        backgroundEnd: "#FFD1E2",
+                        progress: "32",
+                        labelText: "Я сам обратился к сотруднику магазина как только зашел в магазин"
+                    },
+                    {
+                        backgroundStart: "#FD2679",
+                        backgroundEnd: "#FFD1E2",
+                        progress: "63",
+                        labelText: "Сотрудники были свободны, но не проявляли активности, я сам(а) инициировал(а) общение"
+                    },
+                    {
+                        backgroundStart: "#FD2679",
+                        backgroundEnd: "#FFD1E2",
+                        progress: "40",
+                        labelText: "Другое"
+                    }
+                ],
+            },
+            {
+                element: '.chart-2', // class for element
+                type: 'lineDot',               //type of chart
+                dotColor: '#F3A6FF',
+                data: [                          //data      
+                    {
+                        backgroundStart: "#CC6ADC",
+                        backgroundEnd: "#E9C5EF ",
+                        progress: "30",
+                        labelText: "Я пришел(ла) за определенным товаром и сразу сообщил(а) об этом сотруднику магазина"
+                    },
+                    {
+                        backgroundStart: "#BA7BC4",
+                        backgroundEnd: "#CFBED2",
+                        progress: "64",
+                        labelText: "Сотрудник задавал различные вопросы, уточнял что для меня важно и необходимо"
+                    },
+                    {
+                        backgroundStart: "#DF9EE9",
+                        backgroundEnd: "#E8DCE1",
+                        progress: "39",
+                        labelText: "Сотрудник не помогал мне с выбором"
+                    },
+                    {
+                        backgroundStart: "#E7C2EB",
+                        backgroundEnd: "#FCEAFF",
+                        progress: "49",
+                        labelText: "Другое"
+                    }
+                ],
+            },
+            {
+                element: '.chart-3', // class for element
+                type: 'lineDot',               //type of chart
+                dotColor: '#A8A6F2',
+                data: [                          //data      
+                    {
+                        backgroundStart: "#413DFF",
+                        backgroundEnd: "#ADACFF ",
+                        progress: "57",
+                        labelText: "Сотрудник показывал возможности устройства и дал мне попробовать их в действии"
+                    },
+                    {
+                        backgroundStart: "#5450F1",
+                        backgroundEnd: "#918FED",
+                        progress: "40",
+                        labelText: "Сотрудник только рассказывал об устройстве"
+                    },
+                    {
+                        backgroundStart: "#6E6BEF",
+                        backgroundEnd: "#A9A7F2",
+                        progress: "35",
+                        labelText: "Сотрудник только отвечал на мои вопросы"
+                    },
+                    {
+                        backgroundStart: "#8F8DF3",
+                        backgroundEnd: "#BDBBFF",
+                        progress: "54",
+                        labelText: "Ничего из выше перечисленного"
+                    },
+                    {
+                        backgroundStart: "#A6A3FD",
+                        backgroundEnd: "#E6E5FF",
+                        progress: "28",
+                        labelText: "Другое"
+                    }
+                ],
+            },
+            {
+                element: '.chart-4', // class for element
+                type: 'lineDot',               //type of chart
+                dotColor: '#78D14E',
+                data: [                          //data      
+                    {
+                        backgroundStart: "#7DD353",
+                        backgroundEnd: "#D2FFBF ",
+                        progress: "28",
+                        labelText: "Да, информация была полезной, появилось желание купить"
+                    },
+                    {
+                        backgroundStart: "#90D96B",
+                        backgroundEnd: "#D5FFC0",
+                        progress: "70",
+                        labelText: "Да, но предложение было неуместным"
+                    },
+                    {
+                        backgroundStart: "#A3DF82",
+                        backgroundEnd: "#E1FED1",
+                        progress: "42",
+                        labelText: "Нет, не рассказывал"
+                    },
+                    {
+                        backgroundStart: "#A0EEB2",
+                        backgroundEnd: "#D6FFDF",
+                        progress: "49",
+                        labelText: "Другое"
+                    }
+                ],
+            },
+            {
+                element: '.chart-5', // class for element
+                type: 'lineDot',               //type of chart
+                dotColor: '#F3A6FF',
+                data: [                          //data      
+                    {
+                        backgroundStart: "#BC57B7",
+                        backgroundEnd: "#FFDEFD ",
+                        progress: "28",
+                        labelText: "Сотрудник поздравил с покупкой. Остались приятные впечатления"
+                    },
+                    {
+                        backgroundStart: "#EB72E6",
+                        backgroundEnd: "#FED9FC",
+                        progress: "67",
+                        labelText: "Сотрудник равнодушно попрощался"
+                    },
+                    {
+                        backgroundStart: "#DB84D1",
+                        backgroundEnd: "#FEDEFA",
+                        progress: "54",
+                        labelText: "Другое"
+                    }
+                ],
+            },
+        ];
+    </script>
+    <script src="./js/charts.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.box-date input[type=text]').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

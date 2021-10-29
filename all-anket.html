@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reStore</title>
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link href="./css/menu-style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <div class="mobile-menu btn-aside-menu toggle-sidebar">
+                    <div class="b-menu">
+                        <div class="b-bun b-bun--top"></div>
+                        <div class="b-bun b-bun--mid"></div>
+                        <div class="b-bun b-bun--bottom"></div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="/admin">
+                        <img src="./img/logo.jpg" alt="reStore">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li class="treeview active">
+                                <a href="./index.html">
+                                    <div class="icon icon-chart"></div>
+                                    Опрос по рознице
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./index.html">Ключевые показатели</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="./all-anket.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <div class="icon icon-rocket"></div>
+                                    Опрос по доставке
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-file"></div>
+                                    Опрос b2b
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-card"></div>
+                                    Опрос АСЦ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="page-content">
+                <div class="pink-block">
+                    <div class="page-header">
+                        Опрос по рознице / Все анкеты
+                    </div>
+                    <form action="#" method="get" data-pjax="1">
+                        <div class="filter-wrapper">
+                            <!-- блок выбора даты -->
+                            <div class="box box-date">
+                                <h6>Период</h6>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="13-04-2021 - 13-05-2021">
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+        
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+    
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+    
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+    
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <input type="hidden" value=""/>
+                        </div>
+                    </form>
+                    <div class="alerts-wrap">
+                        <div class="alert-item">
+                            <a href="#" class="alert-row">
+                                <div class="info-col">
+                                    <div class="name">
+                                        Всего анкет
+                                    </div>
+                                    <div class="sum">
+                                        9997
+                                    </div>
+                                </div>
+                                <div class="icon-col">
+                                    <div class="icon icon-all-anket"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="alert-item">
+                            <a href="#" class="alert-row">
+                                <div class="info-col">
+                                    <div class="name">
+                                        Доля Алертов
+                                    </div>
+                                    <div class="sum">
+                                        7,8 %
+                                    </div>
+                                </div>
+                                <div class="icon-col">
+                                    <div class="icon icon-share-alert"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="alert-item">
+                            <a href="#" class="alert-row">
+                                <div class="info-col">
+                                    <div class="name">
+                                        Просроч. Алерты
+                                    </div>
+                                    <div class="sum">
+                                        73
+                                    </div>
+                                </div>
+                                <div class="icon-col">
+                                    <div class="icon icon-expired-alert"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="alert-item">
+                            <a href="#" class="alert-row">
+                                <div class="info-col">
+                                    <div class="name">
+                                        Новые Алерты
+                                    </div>
+                                    <div class="sum">
+                                        30
+                                    </div>
+                                </div>
+                                <div class="icon-col">
+                                    <div class="icon icon-new-alert"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="alert-item">
+                            <a href="#" class="alert-row">
+                                <div class="info-col">
+                                    <div class="name">
+                                        Алерты в работе
+                                    </div>
+                                    <div class="sum">
+                                        49
+                                    </div>
+                                </div>
+                                <div class="icon-col">
+                                    <div class="icon icon-alert-in-work"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-row">
+                    <div class="search-wrap">
+                        <form action="#">
+                            <input type="text">
+                            <button class="search-submit"></button>
+                        </form>
+                    </div>
+                    <a href="#" class="unload-wrap">
+                        <div class="icon">
+                        </div>
+                        <div class="text">
+                            <div class="big-text">
+                                Выгрузка
+                            </div>
+                            <div class="small-text">
+                                Скачать файл
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="table-wrap">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Индикатор<br>
+                                        Алерта
+                                    </th>
+                                    <th>
+                                        Статус<br>
+                                        Алерта
+                                    </th>
+                                    <th>
+                                        Номер <br>
+                                        Алерта
+                                    </th>
+                                    <th>
+                                        Дата <br>
+                                        опроса
+                                    </th>
+                                    <th>
+                                        Оценка<br>
+                                        NPS
+                                    </th>
+                                    <th class="long-col">
+                                        Магазин
+                                    </th>
+                                    <th  class="long-col">
+                                        Териториальный
+                                    </th>
+                                    <th class="long-col">
+                                        Продавец
+                                    </th>
+                                    <th>
+                                        Номер<br>
+                                        карты
+                                    </th>
+                                    <th>
+                                        Статус<br>
+                                        доставки
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr class="alert-row">
+                                    <td>
+                                        <div class="alert-label">!ALERT</div>
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr class="alert-row">
+                                    <td>
+                                        <div class="alert-label">!ALERT</div>
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr class="alert-row">
+                                    <td>
+                                        <div class="alert-label">!ALERT</div>
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        -
+                                    </td>
+                                    <td>
+                                        Новый
+                                    </td>
+                                    <td>
+                                        125363
+                                    </td>
+                                    <td>
+                                        12.11.2021 12:43
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
+                                    </td>
+                                    <td>
+                                        Самовывоз
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="pagination-wrap">
+                    <ul class="pagination">
+                        <li class="prev disabled"><span>Назад</span></li>
+                        <li class="active"><a href="#" data-page="0">1</a></li>
+                        <li><a href="#" data-page="1">2</a></li>
+                        <li><a href="#" data-page="2">3</a></li>
+                        <li><a href="#" data-page="3">4</a></li>
+                        <li class="next"><a href="#" data-page="1">Далее</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollup">
+        <div class="arrow-wrap">
+            <div class="icon-arrow"></div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/daterangepicker.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.box-date input[type=text]').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
