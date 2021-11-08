@@ -5,11 +5,35 @@ jQuery(function ($) {
                 DrawCharts(chartData);
             }
         }
+        $( window ).resize(function() {
+            if(typeof chartData != 'undefined'){
+                if(chartData.length > 0){
+                    ClearChart(chartData);
+                    DrawCharts(chartData);
+                }
+            }
+        });
+        function ClearChart(chartData){
+            $('.doughnutTipExpand').remove();
+            $('.pyraamidTip').remove();
+            $('.doughnutTip').remove();
+            $('.pieTip').remove();
+            for(let i = 0; i < chartData.length; i++){
+                if(chartData[i].type !== 'radialbar' && chartData[i].type !== 'radialBar2'){
+                    $(chartData[i].element).html(' ');
+                    $(chartData[i].element).parents('.chart-content').find('.legend .legend-list').html(' ');
+                    $(chartData[i].element).parents('.chart-content').find('.legend-wrap').remove();
+                }
+            }
+        }
         function DrawCharts(chartData){
             for(let i = 0; i < chartData.length; i++){
                 if(chartData[i].element && chartData[i].data){
                     if(chartData[i].type == 'lineDot'){
                         drawLineDot(chartData[i].element, chartData[i].data, chartData[i].dotColor);
+                    }
+                    if(chartData[i].type == 'pieRound'){
+                        drawPieRound(chartData[i].element, chartData[i].data, chartData[i].innerValue, chartData[i].innerText );
                     }
                 }
             }
@@ -131,6 +155,82 @@ jQuery(function ($) {
                 str += '</div>';
                 str += '</div>';
                 $(element).append(str);
+            }
+        }
+        function drawPieRound(element, data, innerValue, innerText){
+            if($(element).length==1 && data.length > 0){
+                var newData = data;
+                var total = 0;
+                $(element).addClass('rounded');
+                for (let i = 0; i < data.length; i++) {
+                    newData[i].title = data[i].labelText;
+                    newData[i].color = data[i].background;
+                    newData[i].value = parseInt(data[i].progress);
+                    total = total + parseInt(data[i].progress);
+                }
+                if(newData) {
+                    if(total > 0) {
+                        $(element).drawPieChart(newData);
+                    }
+                    drawLegend(element, data);
+                    if(innerText && innerValue){
+                        addCenterText(element, innerValue, innerText);
+                    }
+                }
+            }
+        }
+        function drawLegend(element, data){
+            if($(element).parents('.pieRound').find('.legend-wrap').length === 0){
+                let legendHtml = '<div class="legend-wrap"><div class="legend-list"></div></div>';
+                $(legendHtml).appendTo($(element).parents('.pieRound'));
+            }
+            let legend = $(element).parents('.pieRound').find('.legend-wrap .legend-list');
+            let segmentTotal = 0;
+            for (let i = 0, len = data.length; i < len; i++){
+                if(data[i].value) {
+                    segmentTotal += data[i].value;
+                }
+            }
+            //percent for each value
+            for (let i = 0, len = data.length; i < len; i++){
+                if(data[i].value) {
+                    data[i].percent = Math.round((100/segmentTotal)*data[i].value);
+                }
+                else {
+                    data[i].percent = 0;
+                }
+            }
+            for (let i = 0, len = data.length; i < len; i++){
+                let legendRow = 
+                '<div class="legend-item">'
+                +'    <div class="circle" style="background: '+ data[i].color +'; box-shadow: 0px 7px 8px -1px '+ data[i].color +'50;"></div>'
+                +'  <div class="label-col">'
+                +'      <div class="value">'
+                + data[i].value +' шт. / ' + data[i].percent + '%'
+                +'      </div>'
+                +'      <div class="label">'
+                + data[i].title
+                +'      </div>'
+                +'  </div>'
+                +'</div>';
+                $(legendRow).appendTo(legend);
+            }
+            console.log(legend);
+        }
+        function addCenterText(element, value, text){
+            if($(element).length > 0 && value && text){
+                let innerText = 
+                '<div class="inner-circle">'
+                +'<div class="inner-text">'
+                + '<div class="value">'
+                + value
+                + '</div>'
+                + '<div class="text">'
+                + text
+                + '</div>'
+                + '</div>'
+                + '</div>';
+                $(innerText).appendTo(element);
             }
         }
     });

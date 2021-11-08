@@ -309,10 +309,10 @@
                 <div class="box-row">
                     <div class="box-wrapper box-chart">
                         <h3>
-                            Насколько было удобно и комфортно совершить покупку
+                            Как Вы оцениваете качество проведенных работ
                         </h3>
                         <div class="chart-content">
-                            <div class="pieRound smalllegend">
+                            <div class="lines-chart">
                                 <div class="chart">
                                     <div class="chart-1">
                                     </div>
@@ -322,10 +322,38 @@
                     </div>
                     <div class="box-wrapper box-chart">
                         <h3>
-                            Насколько готовы снова совершить покупки 
+                            Насколько время ремонта/обслуживания соответствует ожиданиям?
                         </h3>
                         <div class="chart-content">
-                            <div class="pieRound smalllegend">
+                            <div class="lines-chart">
+                                <div class="chart">
+                                    <div class="chart-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-row">
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Насколько скорость ремонта/обслуживания соответствует ожиданиям?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lines-chart">
+                                <div class="chart">
+                                    <div class="chart-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-wrapper box-chart">
+                        <h3>
+                            Насколько были удовлетворены посещением сервисного центра в целом?
+                        </h3>
+                        <div class="chart-content">
+                            <div class="lines-chart">
                                 <div class="chart">
                                     <div class="chart-2">
                                     </div>
@@ -351,58 +379,6 @@
     <script>
         //data for shart
         let chartData = [
-            {
-                element: '.chart-1', // класс елемента
-                type: 'pieRound',               //тип графіка
-                innerText: 'CSI',
-                innerValue: 8.75,
-                data: [                          //данные графика      
-                    {
-                        background: "#B2FDBA",
-                        gradient: ['#B3FFBB', '#ABEFB2'],
-                        progress: "35",
-                        labelText: "Оценка 9 - 10"
-                    },
-                    {
-                        background: "#FFE09A",
-                        gradient: ['#FFE6AA', '#FFD070'],
-                        progress: "20",
-                        labelText: "Оценка 7 - 8"
-                    },
-                    {
-                        background: "#FEC1C1",
-                        gradient: ['#FEC4C4', '#FFAAAA'],
-                        progress: "45",
-                        labelText: "Оценка 0 - 6"
-                    },
-                ]
-            },
-            {
-                element: '.chart-2', // класс елемента
-                type: 'pieRound',               //тип графіка
-                innerText: 'CSI',
-                innerValue: 8.75,
-                data: [                          //данные графика      
-                    {
-                        background: "#B2FDBA",
-                        gradient: ['#A4F8CF', '#E1FFF0'],
-                        progress: "40",
-                        labelText: "Оценка 9 - 10"
-                    },
-                    {
-                        background: "#FFE09A",
-                        gradient: ['#fbb185', '#FFF6AA'],
-                        progress: "22",
-                        labelText: "Оценка 7 - 8"
-                    },
-                    {
-                        background: "#FEC1C1",
-                        gradient: ['#FFB6D1', '#F28989'],
-                        progress: "60",
-                        labelText: "Оценка 0 - 6"
-                    },
-                ]
-            },
         ];
     </script>
     <script src="./js/charts.js"></script>
