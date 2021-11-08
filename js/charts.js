@@ -5,11 +5,15 @@ jQuery(function ($) {
                 DrawCharts(chartData);
             }
         }
+        let windowWidth = window.innerWidth;
         $( window ).resize(function() {
-            if(typeof chartData != 'undefined'){
-                if(chartData.length > 0){
-                    ClearChart(chartData);
-                    DrawCharts(chartData);
+            if(Math.abs(windowWidth - window.innerWidth) > 50){
+                windowWidth = window.innerWidth;
+                if(typeof chartData != 'undefined'){
+                    if(chartData.length > 0){
+                        ClearChart(chartData);
+                        DrawCharts(chartData);
+                    }
                 }
             }
         });
