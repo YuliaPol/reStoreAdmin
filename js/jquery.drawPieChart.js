@@ -25,7 +25,7 @@
         segmentStrokeWidth : 0,
         baseColor: "#fff",
         baseOffset: 13,
-        edgeOffset: 0,//offset from edge of $this
+        edgeOffset: 20,//offset from edge of $this
         pieSegmentGroupClass: "pieSegmentGroup",
         pieSegmentClass: "pieSegment",
         lightPiesOffset: 12,//lighten pie's width

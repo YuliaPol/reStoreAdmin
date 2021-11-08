@@ -54,14 +54,14 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="treeview active">
+                            <li class="treeview">
                                 <a href="#">
                                     <div class="icon icon-rocket"></div>
                                     Опрос по доставке
                                 </a>
                                 <div class="hidden-menu">
                                     <ul>
-                                        <li class="active">
+                                        <li>
                                             <a href="index2.html">Ключевые показатели</a>
                                         </li>
                                         <li>
@@ -73,17 +73,43 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li>
+                            <li class="treeview">
                                 <a href="#">
                                     <div class="icon icon-file"></div>
                                     Опрос b2b
                                 </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./b2b-chart.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="all-anket2.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="table2.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li>
+                            <li class="treeview active">
                                 <a href="#">
                                     <div class="icon icon-card"></div>
                                     Опрос АСЦ
                                 </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="./ASC-chart.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="all-anket2.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="table2.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -342,7 +368,7 @@
                         <div class="chart-content">
                             <div class="lines-chart">
                                 <div class="chart">
-                                    <div class="chart-1">
+                                    <div class="chart-3">
                                     </div>
                                 </div>
                             </div>
@@ -355,7 +381,7 @@
                         <div class="chart-content">
                             <div class="lines-chart">
                                 <div class="chart">
-                                    <div class="chart-2">
+                                    <div class="chart-4">
                                     </div>
                                 </div>
                             </div>
@@ -377,8 +403,152 @@
     <script type="text/javascript" src="./js/daterangepicker.js"></script>
     <script type="text/javascript" src="./js/jquery.drawPieChart.js"></script>
     <script>
-        //data for shart
+        //data for chart
         let chartData = [
+            {
+                element: '.chart-1', // class for element
+                type: 'lineChart',               //type of chart
+                data: [                          //data      
+                    {
+                        background: "#FE91BB",
+                        background2: "#BC366A",
+                        progress: "45",
+                        labelText: "Отлично"
+                    },
+                    {
+                        background: "#FE91BB",
+                        background2: "#BC366A",
+                        progress: "32",
+                        labelText: "Хорошо"
+                    },
+                    {
+                        background: "#FE91BB",
+                        background2: "#BC366A",
+                        progress: "63",
+                        labelText: "Удовлетворительно"
+                    },
+                    {
+                        background: "#FE91BB",
+                        background2: "#BC366A",
+                        progress: "40",
+                        labelText: "Плохо"
+                    },
+                    {
+                        background: "#FE91BB",
+                        background2: "#BC366A",
+                        progress: "40",
+                        labelText: "Очень плохо"
+                    }
+                ],
+            },
+            {
+                element: '.chart-2', // class for element
+                type: 'lineChart',               //type of chart
+                data: [                          //data      
+                    {
+                        background: "#E1ADEA",
+                        background2: "#BB57CC",
+                        progress: "15",
+                        labelText: "Выше ожидаемого"
+                    },
+                    {
+                        background: "#E1ADEA",
+                        background2: "#BB57CC",
+                        progress: "70",
+                        labelText: "Соответствуют ожиданиям"
+                    },
+                    {
+                        background: "#E1ADEA",
+                        background2: "#BB57CC",
+                        progress: "30",
+                        labelText: "Затрудняюсь ответить"
+                    },
+                    {
+                        background: "#E1ADEA",
+                        background2: "#BB57CC",
+                        progress: "35",
+                        labelText: "Ниже ожидаемого"
+                    },
+                    {
+                        background: "#E1ADEA",
+                        background2: "#BB57CC",
+                        progress: "15",
+                        labelText: "Существенно ниже ожидаемого"
+                    }
+                ],
+            },
+            {
+                element: '.chart-3', // class for element
+                type: 'lineChart',               //type of chart
+                data: [                          //data      
+                    {
+                        background: "#BCF1A1",
+                        background2: "#6BCF3A",
+                        progress: "35",
+                        labelText: "Выше ожидаемого"
+                    },
+                    {
+                        background: "#BCF1A1",
+                        background2: "#6BCF3A",
+                        progress: "10",
+                        labelText: "Соответствуют ожиданиям"
+                    },
+                    {
+                        background: "#BCF1A1",
+                        background2: "#6BCF3A",
+                        progress: "90",
+                        labelText: "Затрудняюсь ответить"
+                    },
+                    {
+                        background: "#BCF1A1",
+                        background2: "#6BCF3A",
+                        progress: "22",
+                        labelText: "Ниже ожидаемого"
+                    },
+                    {
+                        background: "#BCF1A1",
+                        background2: "#6BCF3A",
+                        progress: "3",
+                        labelText: "Существенно ниже ожидаемого"
+                    }
+                ],
+            },
+            {
+                element: '.chart-4', // class for element
+                type: 'lineChart',               //type of chart
+                data: [                          //data      
+                    {
+                        background: "#A9A8FF",
+                        background2: "#716EFE",
+                        progress: "65",
+                        labelText: "Очень удовлетворен"
+                    },
+                    {
+                        background: "#A9A8FF",
+                        background2: "#716EFE",
+                        progress: "20",
+                        labelText: "Удовлетворен"
+                    },
+                    {
+                        background: "#A9A8FF",
+                        background2: "#716EFE",
+                        progress: "33",
+                        labelText: "Затрудняюсь ответить"
+                    },
+                    {
+                        background: "#A9A8FF",
+                        background2: "#716EFE",
+                        progress: "14",
+                        labelText: "Не удовлетворен"
+                    },
+                    {
+                        background: "#A9A8FF",
+                        background2: "#716EFE",
+                        progress: "8",
+                        labelText: "Совсем не удовлетворен"
+                    }
+                ],
+            },
         ];
     </script>
     <script src="./js/charts.js"></script>

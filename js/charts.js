@@ -32,10 +32,120 @@ jQuery(function ($) {
                     if(chartData[i].type == 'lineDot'){
                         drawLineDot(chartData[i].element, chartData[i].data, chartData[i].dotColor);
                     }
+                    if(chartData[i].type == 'lineChart'){
+                        drawLineChart(chartData[i].element, chartData[i].data);
+                    }
                     if(chartData[i].type == 'pieRound'){
                         drawPieRound(chartData[i].element, chartData[i].data, chartData[i].innerValue, chartData[i].innerText );
                     }
                 }
+            }
+        }
+        function drawLineChart(element, data) {
+            if(data.length > 0 && $(element).length>0) {
+                var maxValue = parseInt(data[0].progress);
+                var minValue = parseInt(data[0].progress);
+                var total = 0;
+                for (let i = 0; i < data.length; i++) {
+                    total += parseInt(data[i].progress);
+                    if(maxValue<data[i].progress){
+                        maxValue = parseInt(data[i].progress);
+                    }
+                    if(minValue>data[i].progress){
+                        minValue = parseInt(data[i].progress);
+                    }
+                }
+                var maxAxes = 1;
+                var minAxes = 0;
+                var axes = new Array();
+                var step = 1;
+                if(maxValue < 1) {
+                    maxAxes = Math.round(maxValue*10)/10 + 0.1;
+                    step = 0.1;
+                }
+                else if(maxValue < 10) {
+                    maxAxes = Math.round(maxValue)/ + 1;
+                    step = 1;
+                }
+                else {
+                    step = 5;
+                    while ((maxValue + step)/step > 9 || step>10000){
+                        if(step >=200) {
+                            step += 100;
+                        }
+                        else if(step >=50) {
+                            step += 50;
+                        }
+                        else if(step >=30) {
+                            step += 10;
+                        }
+                        else {
+                            step += 5;
+                        }
+                    }
+                    maxAxes = maxValue + step;
+                    if(minValue > step && maxAxes > 100){
+                        minAxes = step;
+                    }
+                }
+                var axesValue = minAxes;
+                for (let i = 0; axesValue < maxAxes + step; i++) {
+                    axes.push(axesValue);
+                    axesValue = axesValue + step;
+                }
+            
+                var percentValue = new Array(data.length);
+                var percentPosition = new Array(data.length);
+            
+                var minValuePosition = axes[0];
+                var maxValuePosition = axes[axes.length-1];
+                var axesRange = maxValuePosition - minValuePosition;
+                var positionPercent = 100/axesRange;
+                var valuePercent = 100/total;
+            
+                for (let i = 0; i < data.length; i++) {
+                    if(parseInt(data[i].progress) > 0){
+                        percentValue[i] = Math.round(valuePercent*parseInt(data[i].progress));
+                        percentPosition[i] = Math.round(positionPercent*(parseInt(data[i].progress) - minValuePosition));
+                    }
+                    else {
+                        percentValue[i] = 0;
+                        percentPosition[i] = 0;
+                    }
+                }
+        
+                let tooltipValue = ' ';
+                var str = '<div class="lineChartcont">';
+                str += '<div class="lineChartlist">';
+                for (let i = 0; i < data.length; i++) {
+                    let lineStyle = 'background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), ' + data[i].background + ';';
+                    lineStyle += 'box-shadow: inset -2.5px -2.5px 5px rgba(250, 251, 255, 0.1), inset 2.5px 2.5px 5px '+ data[i].background2 +';'; 
+                    str += 
+                    '<div class="lineChartRow">'
+                    +'  <div class="line-col">'
+                    +'      <div class="line">'
+                    +'          <div class="active-line" style="width: '+ percentPosition[i] + '%;' + lineStyle + '"></div>'
+                    +'      </div>'
+                    +'  </div>'
+                    +'   <div class="label-row">'
+                    +'      <div class="label">' + data[i].labelText  +'</div>'
+                    +'      <div class="value">'+ data[i].progress + ' шт. / ' + percentValue[i] + '%'
+                    +'      </div>'
+                    +'  </div>'
+                    +'</div>';
+                }
+                str += '</div>';
+                str += '<div class="y-axis">';
+                for (let i = 0; i < axes.length; i++) {
+                    str +=
+                    '<div class="axis-item">'
+                    +'    ' + axes[i] + '<br>'
+                    +'  шт'
+                    +'</div>';
+                }
+                str += '</div>';
+                str += '</div>';
+                $(element).append(str);
             }
         }
         function drawLineDot(element, data, dotColor) {
