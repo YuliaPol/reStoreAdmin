@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reStore</title>
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link href="./css/menu-style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <div class="mobile-menu btn-aside-menu toggle-sidebar">
+                    <div class="b-menu">
+                        <div class="b-bun b-bun--top"></div>
+                        <div class="b-bun b-bun--mid"></div>
+                        <div class="b-bun b-bun--bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="/admin">
+                        <img src="./img/logo.jpg" alt="reStore">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li class="treeview">
+                                <a href="./index.html">
+                                    <div class="icon icon-chart"></div>
+                                    Опрос по рознице
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./index.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview active">
+                                <a href="#">
+                                    <div class="icon icon-rocket"></div>
+                                    Опрос по доставке
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="index2.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="all-anket2.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="table2.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-file"></div>
+                                    Опрос b2b
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-card"></div>
+                                    Опрос АСЦ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="page-content bar-charts-content">
+                <div class="pink-block">
+                    <div class="page-header">
+                        Опрос по доставке / Ключевые показатели
+                    </div>
+                    <form action="#" method="get" data-pjax="1">
+                        <div class="filter-wrapper">
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">ТК (транспортная компания) </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора даты -->
+                            <div class="box box-date">
+                                <h6 class="f-name-height">Дата доставки</h6>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="13-04-2021 - 13-05-2021">
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">Статус доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">Временной диапазон доставки </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">диапазон</option>
+                                        <option value="2">диапазон</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">Краткое наименование завода </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">наименование завода</option>
+                                        <option value="2">наименование завода</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">Название почтового региона </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Название</option>
+                                        <option value="2">Название</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <input type="hidden" value="" />
+                        </div>
+                    </form>
+                </div>
+                <div class="box-row">
+                    <div class="box-wrapper bar-wrapper">
+                        <h3>Как вы оцениваете доставку товара?</h3>
+                        <div class="bar-chart-wrapper">
+                            <div class="bar-chart-box pink-bar">
+                                <div class="bar five-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content pink-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name">Отлично</div>
+                                </div>
+                                <div class="bar five-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content pink-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name">Хорошо</div>
+                                </div>
+                                <div class="bar five-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content pink-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name">Удовлетвор.</div>
+                                </div>
+                                <div class="bar five-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content pink-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name">Плохо</div>
+                                </div>
+                                <div class="bar five-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content pink-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name">Очень плохо</div>
+                                </div>
+                                <div class="y-scale">
+                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number"></span></div>
+                                </div>
+                            </div>
+                            <script>
+                                let bar1VallArr = [40, 60, 70, 30, 50];
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box-wrapper">
+                        <h3>Курьер приехал в согласованное время доставки?</h3>
+                        <div class="bar-chart-wrapper">
+                            <div class="bar-chart-box purple-bar">
+                                <div class="bar three-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content purple-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name purple-bar-name">Да ,день и время соотв.
+                                        указаниям в доставке</div>
+                                </div>
+                                <div class="bar three-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content purple-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name purple-bar-name">Нет, приехал в назнач.
+                                        день, но в другое аремя</div>
+                                </div>
+                                <div class="bar three-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content purple-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name purple-bar-name">Нет, приехал
+                                        в другой день</div>
+                                </div>
+                                <div class="y-scale">
+                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number"></span></div>
+                                </div>
+                            </div>
+                            <script>
+                                let bar2VallArr = [25, 63, 50];
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-row">
+                    <div class="box-wrapper bar-wrapper">
+                        <h3>Как вы оцениваете сохранность упаковки самого товара?</h3>
+                        <div class="bar-chart-wrapper">
+                            <div class="bar-chart-box blue-bar">
+                                <div class="bar four-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content blue-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name blue-bar-name">Все хорошо</div>
+                                </div>
+                                <div class="bar four-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content blue-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name blue-bar-name">Не расспаковывал(а)
+                                        /Покупал(а) не себе</div>
+                                </div>
+                                <div class="bar four-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content blue-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name blue-bar-name">Упаковка в пыли
+                                        /испачкана</div>
+                                </div>
+                                <div class="bar four-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content blue-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name blue-bar-name">Упаковка помята</div>
+                                </div>
+                                <div class="y-scale">
+                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number"></span></div>
+                                </div>
+                            </div>
+                            <script>
+                                let bar3VallArr = [28, 53, 53, 53];
+                            </script>
+                        </div>
+                    </div>
+                    <div class="box-wrapper">
+                        <h3>Курьер предупредил ли заранее о своем приезде?</h3>
+                        <div class="bar-chart-wrapper">
+                            <div class="bar-chart-box green-bar">
+                                <div class="bar three-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content green-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name green-bar-name">Позвонил не менее
+                                        чем за час</div>
+                                </div>
+                                <div class="bar three-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content green-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name green-bar-name">Курьер позвонил
+                                        только по приезде</div>
+                                </div>
+                                <div class="bar three-el-bar">
+                                    <div class="bar-bg">
+                                        <div class="bar-content green-bar-content">
+                                            <div class="bar-tooltip">
+                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bar-name green-bar-name">Курьер не предупредил
+                                        о приезде</div>
+                                </div>
+                                <div class="y-scale">
+                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
+                                    <div class="scale"><span class="y-scale-number"></span></div>
+                                </div>
+                            </div>
+                            <script>
+                                let bar4VallArr = [28, 53, 53];
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollup">
+        <div class="arrow-wrap">
+            <div class="icon-arrow"></div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/daterangepicker.js"></script>
+    <script src="./js/carts-delivery.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.box-date input[type=text]').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+                        ],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {});
+            });
+        });
+    </script>
+</body>
+
+</html>

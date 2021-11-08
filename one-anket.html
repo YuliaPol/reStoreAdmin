@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reStore</title>
+    <link href="./css/menu-style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="navbar-aside">
+                <div class="mobile-menu btn-aside-menu toggle-sidebar">
+                    <div class="b-menu">
+                        <div class="b-bun b-bun--top"></div>
+                        <div class="b-bun b-bun--mid"></div>
+                        <div class="b-bun b-bun--bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="/admin">
+                        <img src="./img/logo.jpg" alt="reStore">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li class="treeview active">
+                                <a href="./index.html">
+                                    <div class="icon icon-chart"></div>
+                                    Опрос по рознице
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./index.html">Ключевые показатели</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="./all-anket.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <div class="icon icon-rocket"></div>
+                                    Опрос по доставке
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./index2.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket2.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table2.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-file"></div>
+                                    Опрос b2b
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="icon icon-card"></div>
+                                    Опрос АСЦ
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <form action="" id="anket-form">
+                <div class="page-content">
+                    <div class="one-anket-header">
+                        <div class="pink-block profile-header">
+                            <div class="page-header">
+                                Опрос по рознице / Все анкеты / Профиль клиента
+                            </div>
+                            <div class="profile-wrapepr">
+                                <div class="profile-photo-box">
+                                    <span class="photo-title">Профиль клиента</span>
+                                    <div class="photo-container">
+                                        <img class="user-img" id="profileImage" src="./img/user.svg" alt="user">
+                                        <div class="edit">
+                                            <i class="edit-con"></i>
+                                        </div>
+                                        <input id="imageUpload" type="file" name="profile_photo" capture>
+                                    </div>
+                                </div>
+                                <div class="profile-info-box">
+                                    <div class="info-row">
+                                        <div class="info-item">
+                                            <p class="info-name">Номер карты</p>
+                                            <p class="info-number">1209475267</p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p class="info-name">Продавец</p>
+                                            <p class="info-number">Мороз Александр Юрьевич</p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p class="info-name">Номер карты</p>
+                                            <p class="info-number">1209475267</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <div class="info-item">
+                                            <p class="info-name">Магазин</p>
+                                            <p class="info-number">re:Store Москва Рио Ленинский</p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p class="info-name">Статус доставки</p>
+                                            <p class="info-number">Самовывоз</p>
+                                        </div>
+                                        <div class="info-item">
+                                            <p class="info-name">Номер карты</p>
+                                            <p class="info-number">1209475267</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-answer-container">
+                        <p class="answer-title">Ответы клиента</p>
+                        <div class="answer-item no-border">
+                            <span class="q-text">NPS</span>
+                            <div class="answer-box">
+                                <div class="point-square">
+                                    <span class="point">2</span>
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                        <div class="answer-item">
+                            <span class="q-text">Каким образом началось общение с сотрудником магазина?</span>
+                            <div class="answer-box">
+                                <p class="answer-txt">Сотрудники были свободны, но не проявили активности, я сам(а)
+                                    инициировал(а) общение</p>
+                            </div>
+                        </div>
+                        <div class="answer-item">
+                            <span class="q-text">Как проходил выбор товара?</span>
+                            <div class="answer-box">
+                                <p class="answer-txt">Сотрудник не помогал мне с выбором</p>
+                            </div>
+                        </div>
+                        <div class="answer-item">
+                            <span class="q-text">Как проходило знакомство с товаром?</span>
+                            <div class="answer-box">
+                                <p class="answer-txt">Сотрудник только отвечал на мои вопросы</p>
+                            </div>
+                        </div>
+                        <div class="answer-item">
+                            <span class="q-text">Рассказал ли сотрудник магазина о возможностях других товаров и
+                                сервисов?</span>
+                            <div class="answer-box">
+                                <p class="answer-txt">Нет, не рассказывал</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrapper take-to-work">
+                        <button type="button" class="anket-btn">Взять в работу</button>
+                    </div>
+                    <div class="btn-wrapper complete-btn-wrapper">
+                        <button type="button" class="anket-btn">Завершить выполнение</button>
+                    </div>
+                    <div class="comment-container">
+                        <p>Уважаемая Татьяна!</p>
+                        <textarea class="comment-field" name="" id=""></textarea>
+                        <span class="comment-error">Поле обязательно к заполнению</span>
+                        <div class="send-btn-wrp">
+                            <button type="submit" class="send-btn">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="alert-history-container">
+                        <p class="answer-title">История обработки Алерта</p>
+                        <div class="history-item">
+                            <p class="history-item-name">Время события:</p>
+                            <p class="history-item-data">05-10-2021 12:00:32</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">ФИО:</p>
+                            <p class="history-item-data">Синцова Татьяна</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">Действие:</p>
+                            <p class="history-item-data">Взял в работу</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">Время взятия в работу:</p>
+                            <p class="history-item-data">05-10-2021 12:00</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">Время закрытия Алерта:</p>
+                            <p class="history-item-data">06-10-2021 15:30</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">ФИО:</p>
+                            <p class="history-item-data">Синцова Татьяна</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">Действие:</p>
+                            <p class="history-item-data">Закрыл Алерт</p>
+                        </div>
+                        <div class="history-item">
+                            <p class="history-item-name">Комментарий о выполненой работе:</p>
+                            <p class="history-item-data alert-comment">Спасибо, что приняли участие в опросе об уровне
+                                нашего сервиса. Мы всегда стремимся к высокому уровню обслуживания клиентов и нам очень
+                                жаль, что вы не увидели заинтересованности от наших сотрудников</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

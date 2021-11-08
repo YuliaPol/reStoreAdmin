@@ -98,53 +98,81 @@
                     </div>
                     <form action="#" method="get">
                         <div class="filter-wrapper">
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">ТК (транспортная компания) </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Самовывоз</option>
+                                        <option value="2">Самовывоз</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
                             <!-- блок выбора даты -->
                             <div class="box box-date">
-                                <h6>Период</h6>
+                                <h6 class="f-name-height">Дата доставки</h6>
                                 <div class="form-group">
                                     <input type="text" class="form-control" value="13-04-2021 - 13-05-2021">
                                     <div class="help-block"></div>
                                 </div>
                             </div>
-        
+
                             <!-- блок выбора расположения -->
                             <div class="box">
-                                <h6>Статус доставки </h6>
+                                <h6 class="f-name-height">Статус доставки </h6>
                                 <div class="form-group">
                                     <select class="form-control">
                                         <option value="">Все</option>
                                         <option value="1">Самовывоз</option>
                                         <option value="2">Самовывоз</option>
                                     </select>
-    
+
                                     <div class="help-block"></div>
                                 </div>
                             </div>
                             <!-- блок выбора расположения -->
                             <div class="box">
-                                <h6>Статус доставки </h6>
+                                <h6 class="f-name-height">Временной диапазон доставки </h6>
                                 <div class="form-group">
                                     <select class="form-control">
                                         <option value="">Все</option>
-                                        <option value="1">Самовывоз</option>
-                                        <option value="2">Самовывоз</option>
+                                        <option value="1">диапазон</option>
+                                        <option value="2">диапазон</option>
                                     </select>
-    
+
                                     <div class="help-block"></div>
                                 </div>
                             </div>
                             <!-- блок выбора расположения -->
                             <div class="box">
-                                <h6>Статус доставки </h6>
+                                <h6 class="f-name-height">Краткое наименование завода </h6>
                                 <div class="form-group">
                                     <select class="form-control">
                                         <option value="">Все</option>
-                                        <option value="1">Самовывоз</option>
-                                        <option value="2">Самовывоз</option>
+                                        <option value="1">наименование завода</option>
+                                        <option value="2">наименование завода</option>
                                     </select>
+
                                     <div class="help-block"></div>
                                 </div>
                             </div>
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6 class="f-name-height">Название почтового региона </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Название</option>
+                                        <option value="2">Название</option>
+                                    </select>
+
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <input type="hidden" value="" />
                         </div>
                     </form>
                 </div>
@@ -185,30 +213,23 @@
                                         заполненых<br>
                                         анкет
                                     </th>
-                                    <th rowspan="2">
-                                        Оценка<br>
-                                        NPS
-                                    </th>
                                     <th rowspan="2" class="long-col">
-                                        Общение с <br>
-                                        сотрудником
+                                        Как вы оцениваете доставку товара?
                                     </th>
                                     <th  rowspan="2" class="long-col">
-                                        Выбор товара
+                                        Курьер приехал в согласованное время доставки?
                                     </th>
                                     <th  rowspan="2" class="long-col">
-                                        Знакомство <br>
-                                        с товаром
+                                        Как вы оцениваете сохранность упаковки самого товара?
                                     </th>
                                     <th rowspan="2" class="long-col">
-                                        Консультация <br>
-                                        сотрудника
+                                        Курьер предупредил ли заранее о своем приезде?
                                     </th>
-                                    <th rowspan="2" class="long-col">
+                                    <!-- <th rowspan="2" class="long-col">
                                         Завершение <br>
                                         взаимодействия <br>
                                         с сотрудником
-                                    </th>
+                                    </th> -->
                                     <th rowspan="2">
                                         Доля <br>
                                         Алертов (%)
@@ -254,14 +275,11 @@
                                     <td>
                                         7236
                                     </td>
-                                    <td>
-                                        9.1
-                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
                                     <td>9.1</td>
                                     <td>9.1</td>
                                     <td>9.1</td>
@@ -287,15 +305,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -321,15 +336,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -352,15 +364,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -387,15 +396,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -421,15 +427,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -452,15 +455,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -485,14 +485,11 @@
                                     <td>
                                         7236
                                     </td>
-                                    <td>
-                                        9.1
-                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
                                     <td>9.1</td>
                                     <td>9.1</td>
                                     <td>9.1</td>
@@ -518,15 +515,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -552,15 +546,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -583,15 +574,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -618,15 +606,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -652,15 +637,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -683,15 +665,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -716,14 +695,11 @@
                                     <td>
                                         7236
                                     </td>
-                                    <td>
-                                        9.1
-                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
                                     <td>9.1</td>
                                     <td>9.1</td>
                                     <td>9.1</td>
@@ -749,15 +725,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -783,15 +756,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -814,15 +784,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -849,15 +816,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -883,15 +847,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -914,15 +875,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -947,14 +905,11 @@
                                     <td>
                                         7236
                                     </td>
-                                    <td>
-                                        9.1
-                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
                                     <td>9.1</td>
                                     <td>9.1</td>
                                     <td>9.1</td>
@@ -980,15 +935,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -1014,15 +966,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -1045,15 +994,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -1080,15 +1026,12 @@
                                     <td>
                                         198
                                     </td>
-                                    <td>
-                                        7,5
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>7,5</td>
                                     <td>7,5</td>
@@ -1114,15 +1057,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
@@ -1145,15 +1085,12 @@
                                     <td>
                                         76
                                     </td>
-                                    <td>
-                                        8,9
-                                    </td>
 
                                     <td></td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <!-- <td></td> -->
 
                                     <td>8,9</td>
                                     <td>5,5</td>
