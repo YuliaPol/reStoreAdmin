@@ -54,7 +54,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="treeview  active">
+                            <li class="treeview">
                                 <a href="#">
                                     <div class="icon icon-rocket"></div>
                                     Опрос по доставке
@@ -62,9 +62,9 @@
                                 <div class="hidden-menu">
                                     <ul>
                                         <li>
-                                            <a href="index2.html">Ключевые показатели</a>
+                                            <a href="./index2.html">Ключевые показатели</a>
                                         </li>
-                                        <li class="active">
+                                        <li>
                                             <a href="./all-anket2.html">Все анкеты</a>
                                         </li>
                                         <li>
@@ -73,7 +73,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="treeview">
+                            <li class="treeview active">
                                 <a href="#">
                                     <div class="icon icon-file"></div>
                                     Опрос b2b
@@ -83,8 +83,8 @@
                                         <li>
                                             <a href="./b2b-chart.html">Ключевые показатели</a>
                                         </li>
-                                        <li>
-                                            <a href="./all-anket2.html">Все анкеты</a>
+                                        <li class="active">
+                                            <a href="./all-anket3.html">Все анкеты</a>
                                         </li>
                                         <li>
                                             <a href="./table3.html">Сводная информация</a>
@@ -146,18 +146,19 @@
                         </div>
                     </div>
                     <div class="page-header">
-                        Опрос по доставке / Все анкеты
+                        Опрос b2b / Все анкеты
                     </div>
                     <form action="#" method="get" data-pjax="1">
                         <div class="filter-wrapper">
+
                             <!-- блок выбора расположения -->
                             <div class="box">
-                                <h6 class="f-name-height">ТК (транспортная компания) </h6>
+                                <h6 class="f-name-height">ID </h6>
                                 <div class="form-group">
                                     <select class="form-control">
                                         <option value="">Все</option>
-                                        <option value="1">Самовывоз</option>
-                                        <option value="2">Самовывоз</option>
+                                        <option value="1">ID 1</option>
+                                        <option value="2">ID 2</option>
                                     </select>
 
                                     <div class="help-block"></div>
@@ -165,65 +166,13 @@
                             </div>
                             <!-- блок выбора даты -->
                             <div class="box box-date">
-                                <h6 class="f-name-height">Дата доставки</h6>
+                                <h6 class="f-name-height">Период</h6>
                                 <div class="form-group">
                                     <input type="text" class="form-control" value="13-04-2021 - 13-05-2021">
                                     <div class="help-block"></div>
                                 </div>
                             </div>
 
-                            <!-- блок выбора расположения -->
-                            <div class="box">
-                                <h6 class="f-name-height">Статус доставки </h6>
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option value="">Все</option>
-                                        <option value="1">Самовывоз</option>
-                                        <option value="2">Самовывоз</option>
-                                    </select>
-
-                                    <div class="help-block"></div>
-                                </div>
-                            </div>
-                            <!-- блок выбора расположения -->
-                            <div class="box">
-                                <h6 class="f-name-height">Временной диапазон доставки </h6>
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option value="">Все</option>
-                                        <option value="1">диапазон</option>
-                                        <option value="2">диапазон</option>
-                                    </select>
-
-                                    <div class="help-block"></div>
-                                </div>
-                            </div>
-                            <!-- блок выбора расположения -->
-                            <div class="box">
-                                <h6 class="f-name-height">Краткое наименование завода </h6>
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option value="">Все</option>
-                                        <option value="1">наименование завода</option>
-                                        <option value="2">наименование завода</option>
-                                    </select>
-
-                                    <div class="help-block"></div>
-                                </div>
-                            </div>
-                            <!-- блок выбора расположения -->
-                            <div class="box">
-                                <h6 class="f-name-height">Название почтового региона </h6>
-                                <div class="form-group">
-                                    <select class="form-control">
-                                        <option value="">Все</option>
-                                        <option value="1">Название</option>
-                                        <option value="2">Название</option>
-                                    </select>
-
-                                    <div class="help-block"></div>
-                                </div>
-                            </div>
                             <input type="hidden" value="" />
                         </div>
                     </form>
@@ -346,20 +295,26 @@
                                         Дата <br>
                                         опроса
                                     </th>
+                                    <th>
+                                        Оценка<br>
+                                        NPS
+                                    </th>
                                     <th class="long-col">
-                                        Дата доставки	
+                                        Магазин
                                     </th>
                                     <th  class="long-col">
-                                        Статус доставки	
+                                        Териториальный
                                     </th>
                                     <th class="long-col">
-                                        Наименование транспортной <br> компании
+                                        Продавец
                                     </th>
                                     <th>
-                                        Временной диапазон <br> доставки
+                                        Номер<br>
+                                        карты
                                     </th>
                                     <th>
-                                        Название <br> почтового региона
+                                        Статус<br>
+                                        доставки
                                     </th>
                                 </tr>
                             </thead>
@@ -378,16 +333,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr class="alert-row">
@@ -404,16 +367,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -430,16 +401,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -456,16 +435,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -482,16 +469,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                       
                                     </td>
                                 </tr>
                                 <tr class="alert-row">
@@ -508,16 +503,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -534,16 +537,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -560,16 +571,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr>
@@ -586,16 +605,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                                 <tr class="alert-row">
@@ -612,16 +639,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                       
                                     </td>
                                 </tr>
                                 <tr>
@@ -638,16 +673,24 @@
                                         12.11.2021 12:43
                                     </td>
                                     <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        re:Store Москва
+                                        Рио Ленинский
+                                    </td>
+                                    <td>
+                                        Михаил Батусов
+                                    </td>
+                                    <td>
+                                        Морозов Александр
+                                        Юрьевич
+                                    </td>
+                                    <td>
+                                        29374690117635
                                     </td>
                                     <td>
                                         Самовывоз
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
                                     </td>
                                 </tr>
                             </tbody>

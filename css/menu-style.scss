@@ -81,80 +81,146 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     min-height: calc(100vh - 70px);
     font-family: $fontpage;
     padding: 0px;
-    .header {
-        margin-left: $sideBarWidth;
-        background-color: $maincolor;
-        height: 70px;
-        width: calc(100% - $sideBarWidth);
-        display: flex;
-        align-self: center;
-        justify-content: space-between;
+    overflow-x: hidden;
+    .navbar-aside {
         position: relative;
-        transition: all 0.3s;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        z-index: 1000;
-        &.full-width {
-            margin: 0px;
-            width: 100%;
-        }
-        .navbar-aside {
-            position: relative;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
-        .mobile-menu {
-            display: none;
-            left: 20px;
-            position: absolute;
-            top: 15px;
-            padding: 10px 5px;
-            padding-top: 12px;
-            width: 45px;
-            height: 45px;
-            align-items: center;
-            justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .mobile-menu {
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        .b-menu {
             border-radius: 50%;
-            .b-menu {
-                border-radius: 50%;
-                cursor: pointer;
-                display: inline-block;
-                height: 20px;
-                padding-left: 0px;
-                padding-top: 0px;
+            cursor: pointer;
+            display: inline-block;
+            height: 20px;
+            padding-left: 0px;
+            padding-top: 0px;
+            position: relative;
+            transition: 0.3s;
+            user-select: none;
+            width: 25px;
+            z-index: 12;
+          }
+          .b-bun {
+            background: #656565;
+            position: relative;
+            transition: 0.3s;
+            &--top {
+              height: 2px;
+              top: 0;
+              width: 100%;
+            }
+          
+            &--mid {
+              height: 2px;
+              top: 6px;
+              width: 100%;
+            }
+          
+            &--bottom {
+              height: 2px;
+              top: 12px;
+              width: 100%;
+            }
+          }
+          
+    }
+    .top-nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .navbar-user {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            .user {
+                align-self: center;
                 position: relative;
-                transition: 0.3s;
-                user-select: none;
-                width: 25px;
-                z-index: 12;
-              }
-              .b-bun {
-                background: #fff;
-                position: relative;
-                transition: 0.3s;
-                &--top {
-                  height: 2px;
-                  top: 0;
-                  width: 100%;
+                padding-bottom: 10px;
+                &:hover {
+                    .dropdown-user {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
                 }
-              
-                &--mid {
-                  height: 2px;
-                  top: 6px;
-                  width: 100%;
+                .user-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    .icon-user {
+                        width: 45px;
+                        height: 45px;
+                        background-image: url(../img/icon-user.svg);
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                    }
+                    .user-name {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        font-family: $fontpage;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 22px;
+                        letter-spacing: 0.02em;
+                        color: #656565;
+                    }
                 }
-              
-                &--bottom {
-                  height: 2px;
-                  top: 12px;
-                  width: 100%;
+                .show-user-dropdown {
+                    cursor: pointer;
                 }
-              }
-              
+                .dropdown-user {
+                    position: absolute;
+                    top: 50px;
+                    right: 0px;
+                    background-color: #ffffff;
+                    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+                    width: 200px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease-in;
+                    ul {
+                        list-style: none;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                        li {
+                            font-size: 14px;
+                            color: $fontcolor;
+                            a {
+                                outline: none;
+                                display: inline-block;
+                                text-decoration: none;
+                                color: $fontcolor;
+                                width: 100%;
+                                font-size: 14px;
+                                padding: 15px 25px;
+                                &.logout {
+                                    padding-left: 40px;
+                                    position: relative;
+                                    &::before {
+                                        content: "";
+                                        left: 15px;
+                                        top: 12px;
+                                        width: 17px;
+                                        height: 17px;
+                                        background-image: url(../img/icon-logout.png);
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        background-position: center;
+                                        display: block;
+                                        position: absolute;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .sidebar {
@@ -318,7 +384,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         }
     }
     .content {
-        width: calc(100% - $sideBarWidth);
+        width: calc(100% - 220px);
         margin-left: $sideBarWidth;
         transition: all 0.3s;
         background-color: $backgroundpage;
@@ -327,7 +393,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         &.full-width {
             margin: 0px;
             width: 100%;
-            margin-top: 70px;
         }
         .header-page {
             padding-top: 15px;
@@ -693,18 +758,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
     .container .sidebar.hide {
         left: 0px;
-        top: 70px;
         display: block !important;
     }
-    .container {
-        div.header {
-            display: block !important;
-            .mobile-menu {
-                display: block;
-            }
+    .container div.header {
+        display: block !important;
+        position: absolute;
+        top: 20px;
+        opacity: 0;
+        pointer-events: none;
+        left: 0px;
+        transition: all 0.3s ease-in;
+        &.full-width {
+            opacity: 1;
+            left: 230px;
+            pointer-events: all;
         }
-        .content {
-            margin-top: 70px !important;
+        .mobile-menu {
+            .b-bun--top {
+                transform: rotate(45deg);
+                top: 8px;
+            }
+            .b-bun--mid {
+                display: none;
+            }
+            .b-bun--bottom {
+                transform: rotate(-45deg);
+                top: 6px;
+            }
         }
     }
 }
