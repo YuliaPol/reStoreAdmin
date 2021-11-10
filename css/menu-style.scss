@@ -278,6 +278,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                                 background-repeat: no-repeat;
                                 background-size: contain;
                             }
+                            &.icon-users {
+                                background: url(./../img/icon-users-a.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
                         }
                         .hidden-menu {
                             max-height: 500px;
@@ -374,6 +380,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                         }
                         &.icon-card {
                             background: url(./../img/icon-card.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                        &.icon-users {
+                            background: url(./../img/icon-users.svg);
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: contain;

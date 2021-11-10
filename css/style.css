@@ -1276,6 +1276,210 @@
   padding-bottom: 10px;
 }
 
+.container .page-content .mg-tp-30 {
+  margin-top: 30px;
+}
+
+.container .page-content .users-table input[type=text],
+.container .page-content .users-table input[type=email],
+.container .page-content .users-table input[type=password],
+.container .page-content .users-table input[type=tel] {
+  outline: none;
+  max-width: 100%;
+  width: 110px;
+  padding: 10px 5px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  line-height: 16px;
+  color: #383838;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #000;
+}
+
+.container .page-content .users-table input[type=text]:focus,
+.container .page-content .users-table input[type=email]:focus,
+.container .page-content .users-table input[type=password]:focus,
+.container .page-content .users-table input[type=tel]:focus {
+  border-color: #FF0079;
+}
+
+.container .page-content .users-table select {
+  border-color: rgba(0, 0, 0, 0);
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #383838;
+  outline: none;
+  max-width: 100%;
+  width: 150px;
+  white-space: normal;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.container .page-content .users-table select option {
+  white-space: normal;
+}
+
+.container .page-content .users-table .edit-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .page-content .users-table .edit-wrap .btn-delete {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background: url(./../img/icons-delete.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.container .page-content .users-table .edit-wrap .btn-edit {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background: url(./../img/edit-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.container .page-content .btn-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .page-content .btn-wrap .btn-default {
+  display: block;
+  background: #FF0079;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: #FFFFFF;
+  width: 250px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.container .page-content .form-wrapper {
+  margin-top: 35px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px 50px 30px;
+}
+
+.container .page-content .form-wrapper .form-header {
+  padding-bottom: 30px;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+
+.container .page-content .form-wrapper .form-group {
+  padding-bottom: 20px;
+}
+
+.container .page-content .form-wrapper .form-group .select2-container--default .select2-selection--single {
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0px;
+}
+
+.container .page-content .form-wrapper .form-group .label {
+  padding-bottom: 5px;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  color: #4F4F4F;
+}
+
+.container .page-content .form-wrapper .form-group select {
+  width: 100%;
+  max-width: 500px;
+}
+
+.container .page-content .form-wrapper .form-group input[type=text],
+.container .page-content .form-wrapper .form-group input[type=email],
+.container .page-content .form-wrapper .form-group input[type=tel],
+.container .page-content .form-wrapper .form-group input[type=password] {
+  outline: none;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  max-width: 500px;
+  padding: 5px 10px;
+}
+
+.container .page-content .users-btns-wrap {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container .page-content .users-btns-wrap > a {
+  display: block;
+  background: #FF0079;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: #FFFFFF;
+  width: 250px;
+  text-align: center;
+}
+
 .container .page-content .table-wrap {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
@@ -1403,6 +1607,11 @@
   bottom: 0px;
   background: #F9BBBB;
   z-index: 1;
+}
+
+.container .page-content .table-wrap table .filter-row td {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .container .page-content .table-wrap table td {
@@ -1544,6 +1753,13 @@
 
 .container .bar-charts-content {
   padding-bottom: 80px;
+}
+
+.select2-container--default .select2-results__options {
+  font-size: 12px;
+  line-height: 16px;
+  color: #383838;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
 }
 
 .lineDotcont {

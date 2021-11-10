@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reStore</title>
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="./css/menu-style.css?87987" rel="stylesheet">
+    <link href="./css/style.css?87987" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <div class="mobile-menu btn-aside-menu toggle-sidebar">
+                    <div class="b-menu">
+                        <div class="b-bun b-bun--top"></div>
+                        <div class="b-bun b-bun--mid"></div>
+                        <div class="b-bun b-bun--bottom"></div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="/admin">
+                        <img src="./img/logo.jpg" alt="reStore">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav">
+                            <li class="treeview">
+                                <a href="./index.html">
+                                    <div class="icon icon-chart"></div>
+                                    Опрос по рознице
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./index.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <div class="icon icon-rocket"></div>
+                                    Опрос по доставке
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./index2.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket2.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table2.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <div class="icon icon-file"></div>
+                                    Опрос b2b
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./b2b-chart.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket3.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table3.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <div class="icon icon-card"></div>
+                                    Опрос АСЦ
+                                </a>
+                                <div class="hidden-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="./ASC-chart.html">Ключевые показатели</a>
+                                        </li>
+                                        <li>
+                                            <a href="./all-anket4.html">Все анкеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="./table4.html">Сводная информация</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <a href="./users.html">
+                                    <div class="icon icon-users"></div>
+                                    Пользователи
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="page-content">
+                <div class="pink-block">
+                    <div class="top-nav">
+                        <div class="navbar-aside">
+                            <div class="mobile-menu btn-aside-menu toggle-sidebar">
+                                <div class="b-menu">
+                                    <div class="b-bun b-bun--top"></div>
+                                    <div class="b-bun b-bun--mid"></div>
+                                    <div class="b-bun b-bun--bottom"></div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="navbar-user">
+                            <div class="user">
+                                <div class="user-wrapper show-user-dropdown">
+                                    <div class="user-name">Admin</div>
+                                    <div class="icon-user"></div>
+                                </div>
+                                <div class="dropdown-user">
+                                    <ul>
+                                        <li>
+                                            <a href="#" class="logout">Выход </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-header">
+                        Пользователи / Редактирование пользователя
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <form action="#">
+                        <div class="form-header">
+                            Редактирование пользователя
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Введите Логин</div>
+                            <input type="text" name="q-1" value="Admin">
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Введите пароль</div>
+                            <input type="text" name="q-2" value="dtfghj">
+                        </div>
+                        <div class="form-group">
+                            <div class="label">ФИО сотрудника</div>
+                            <input type="text" name="q-3" value="Иванов Иван">
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Права доступа</div>
+                            <select name="q-4" class="select2-single">
+                                <option value="логисты">логисты</option>
+                                <option value="Директор интернет-магазина">Директор интернет-магазина</option>
+                                <option selected value="Руководитель по клиентскому опыту, директор направления">
+                                    Руководитель по клиентскому опыту, директор направления
+                                </option>
+                                <option value="Cпециалист по контролю качества обслуживания">
+                                    Cпециалист по контролю качества обслуживания
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Выбор для какого опроса</div>
+                            <select name="q-5" class="select2-single">
+                                <option value="Опрос розница">Опрос розница</option>
+                                <option value="Опрос доставка">Опрос доставка</option>
+                                <option selected value="Опрос b2b">Опрос b2b</option>
+                                <option value="Опрос  АСЦ">Опрос  АСЦ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Введите email</div>
+                            <input type="email" name="q-6" value="email@email.com">
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Введите телефон</div>
+                            <input type="text" name="q-7" value="0900000000">
+                        </div>
+                        <div class="form-group">
+                            <div class="label">Ответственный сотрудник</div>
+                            <select name="q-8" class="select2-single">
+                                <option value="управляющий">управляющий</option>
+                                <option selected value="зам. управляющего">зам. управляющего</option>
+                            </select>
+                        </div>
+                        <div class="form-group check-group">
+                            <label>
+                                <input type="checkbox" name="q-9" checked>
+                                Активен
+                            </label>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn-default">Отправить</button>
+                        </div>
+                    </form>                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollup">
+        <div class="arrow-wrap">
+            <div class="icon-arrow"></div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript" src="./js/daterangepicker.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.box-date input[type=text]').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

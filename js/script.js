@@ -89,6 +89,11 @@ jQuery(function ($) {
         $('.page-content').on('apply.daterangepicker', '.box-date input', (e, picker) => {
             $(e.target).parents('form').submit();
         });
+        if($.fn.select2){
+            $('.select2-single').select2({
+                minimumResultsForSearch: Infinity
+            });
+        }
     });
 });
 

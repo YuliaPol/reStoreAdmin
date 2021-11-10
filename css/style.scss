@@ -1081,7 +1081,159 @@ $maincolor: #FF0079;
                 }
             }
         }
-
+        .mg-tp-30 {
+            margin-top: 30px;
+        }
+        .users-table {
+            input[type=text],
+            input[type=email],
+            input[type=password],
+            input[type=tel] {
+                outline: none;
+                max-width: 100%;
+                width: 110px;
+                padding: 10px 5px;
+                border: none;
+                outline: none;
+                font-size: 12px;
+                line-height: 16px;
+                color: #383838;
+                font-family: $fontpage;
+                border: 1px solid #000;
+                &:focus {
+                    border-color: $maincolor;
+                }
+            }
+            select {
+                border-color: rgba(0, 0, 0, 0);
+                font-family: $fontpage;
+                font-size: 12px;
+                line-height: 16px;
+                color: #383838;
+                outline: none;
+                max-width: 100%;
+                width: 150px;
+                white-space: normal;
+                box-shadow: none;
+                option {
+                    white-space: normal;
+                }
+            }
+            .edit-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .btn-delete {
+                    width: 15px;
+                    height: 15px;
+                    margin-left: 10px;
+                    background: url(./../img/icons-delete.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                .btn-edit {
+                    width: 15px;
+                    height: 15px;
+                    margin-left: 10px;
+                    background: url(./../img/edit-icon.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        .btn-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .btn-default {
+                display: block;
+                background: $maincolor;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin-right: 20px;
+                font-family: $fontpage;
+                font-size: 17px;
+                line-height: 22px;
+                color: #FFFFFF;
+                width: 250px;
+                text-align: center;  
+                border: none;
+                cursor: pointer;
+            }
+        }
+        .form-wrapper  {
+            margin-top: 35px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 30px 50px 30px;
+            .form-header {
+                padding-bottom: 30px;
+                font-family: $fontpage;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                color: #000000;
+            }
+            .form-group {
+                padding-bottom: 20px;
+                .select2-container--default .select2-selection--single {
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    border-radius: 0px;
+                }
+                .label {
+                    padding-bottom: 5px;
+                    font-family: $fontpage;
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 0.02em;
+                    color: #4F4F4F;
+                }
+                select {
+                    width: 100%;
+                    max-width: 500px;
+                }
+                input[type=text],
+                input[type=email],
+                input[type=tel],
+                input[type=password] {
+                    outline: none;
+                    font-family: $fontpage;
+                    font-size: 16px;
+                    line-height: 22px;
+                    letter-spacing: 0.02em;
+                    color: #000000;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    width: 100%;
+                    max-width: 500px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+        .users-btns-wrap {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            & > a {
+                display: block;
+                background: $maincolor;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin-right: 20px;
+                font-family: $fontpage;
+                font-size: 17px;
+                line-height: 22px;
+                color: #FFFFFF;
+                width: 250px;
+                text-align: center;
+            }
+        }
         .table-wrap {
             background: #FFFFFF;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
@@ -1206,7 +1358,12 @@ $maincolor: #FF0079;
                         z-index: 1;
                     }
                 }
-
+                .filter-row {
+                    td {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                }
                 td {
                     font-family: $fontpage;
                     font-style: normal;
@@ -1349,7 +1506,14 @@ $maincolor: #FF0079;
         padding-bottom: 80px;
     }
 }
-
+.select2-container--default {
+    .select2-results__options {
+        font-size: 12px;
+        line-height: 16px;
+        color: #383838;
+        font-family: $fontpage;
+    }
+}
 .lineDotcont {
     padding-top: 20px;
 

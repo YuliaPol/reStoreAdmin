@@ -369,6 +369,14 @@ body {
           background-size: contain;
 }
 
+.container .sidebar .menu ul li.active .icon.icon-users {
+  background: url(./../img/icon-users-a.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
 .container .sidebar .menu ul li.active .hidden-menu {
   max-height: 500px;
 }
@@ -489,6 +497,14 @@ body {
 
 .container .sidebar .menu ul li .icon.icon-card {
   background: url(./../img/icon-card.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.container .sidebar .menu ul li .icon.icon-users {
+  background: url(./../img/icon-users.svg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
