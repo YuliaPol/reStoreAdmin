@@ -130,6 +130,9 @@ if (surveyPoint <= 6) {
 $('.take-to-work').on('click', function () {
     $(this).hide();
     $('.complete-btn-wrapper').show();
+});
+$('.complete-btn-wrapper').on('click', function () {
+    $(this).hide();
     $('.comment-container').fadeIn();
 });
 
