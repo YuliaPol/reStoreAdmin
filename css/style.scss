@@ -1377,7 +1377,12 @@ $maincolor: #FF0079;
                     padding-left: 25px;
                     padding-right: 25px;
                     border-bottom: 1px solid #F2F2F2;
-
+                    &:first-child {
+                        div {
+                            min-height: 20px;
+                            min-width: 100%;
+                        }
+                    }
                     a {
                         display: block;
                         height: 100%;

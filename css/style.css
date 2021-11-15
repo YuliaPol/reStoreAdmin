@@ -1629,6 +1629,11 @@
   border-bottom: 1px solid #F2F2F2;
 }
 
+.container .page-content .table-wrap table td:first-child div {
+  min-height: 20px;
+  min-width: 100%;
+}
+
 .container .page-content .table-wrap table td a {
   display: block;
   height: 100%;
