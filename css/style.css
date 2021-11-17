@@ -175,6 +175,25 @@
           background-size: contain;
 }
 
+.container .page-content .btn-back-wrap {
+  padding-top: 30px;
+}
+
+.container .page-content .btn-back-wrap .btn-back {
+  display: inline-block;
+  background: #FF0079;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
 .container .page-content .profile-header {
   min-height: 133px;
 }
@@ -194,7 +213,7 @@
           backdrop-filter: blur(21px);
   padding: 15px;
   position: relative;
-  top: 65px;
+  top: 35px;
 }
 
 .container .page-content .profile-header .profile-wrapepr .profile-photo-box {
@@ -302,8 +321,8 @@
 }
 
 .container .page-content .profile-header .profile-wrapepr .profile-info-box .info-row .info-item:nth-child(2) {
-  max-width: 130px;
-  min-width: 130px;
+  max-width: 200px;
+  min-width: 200px;
 }
 
 .container .page-content .profile-header .profile-wrapepr .profile-info-box .info-row .info-item:last-child {
@@ -464,7 +483,6 @@
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
   padding: 20px;
-  display: none;
 }
 
 .container .page-content .alert-history-container .answer-title {
@@ -1501,6 +1519,93 @@
   background: #FF0079;
 }
 
+.container .page-content .table-wrap.mystery-wrap table thead tr:nth-child(1) th {
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.container .page-content .table-wrap.mystery-wrap table thead tr:nth-child(2) th {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  border-bottom: none;
+}
+
+.container .page-content .table-wrap.mystery-wrap table thead tr:nth-child(2) th[colspan="3"] {
+  background: rgba(255, 0, 131, 0.15);
+}
+
+.container .page-content .table-wrap.mystery-wrap table thead tr:nth-child(3) {
+  border-bottom: 1px solid #000000;
+}
+
+.container .page-content .table-wrap.mystery-wrap table thead tr:nth-child(3) th {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  width: 60px;
+  min-width: 60px;
+  border-bottom: none;
+  padding-top: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 7px;
+}
+
+.container .page-content .table-wrap.mystery-wrap table .td-green {
+  background: #B3FFBB;
+}
+
+.container .page-content .table-wrap.mystery-wrap table .label-green {
+  background: #B3FFBB;
+  -webkit-box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  padding: 10px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+}
+
+.container .page-content .table-wrap.mystery-wrap table .td-yellow {
+  background: rgba(255, 191, 0, 0.5);
+}
+
+.container .page-content .table-wrap.mystery-wrap table .label-yellow {
+  background: rgba(255, 191, 0, 0.5);
+  -webkit-box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  padding: 10px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+}
+
+.container .page-content .table-wrap.mystery-wrap table .td-red {
+  background: rgba(255, 134, 134, 0.7);
+}
+
+.container .page-content .table-wrap.mystery-wrap table .label-red {
+  background: rgba(255, 134, 134, 0.7);
+  -webkit-box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  padding: 10px;
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
+}
+
+.container .page-content .table-wrap.mystery-wrap table td {
+  vertical-align: middle;
+}
+
+.container .page-content .table-wrap.mystery-wrap table td:nth-child(4), .container .page-content .table-wrap.mystery-wrap table td:nth-child(5), .container .page-content .table-wrap.mystery-wrap table td:nth-child(6), .container .page-content .table-wrap.mystery-wrap table td:nth-child(7), .container .page-content .table-wrap.mystery-wrap table td:nth-child(8) {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
 .container .page-content .table-wrap .table-responsive {
   max-width: 100%;
   width: 100%;
@@ -1631,7 +1736,7 @@
 
 .container .page-content .table-wrap table td:first-child div {
   min-height: 20px;
-  min-width: 100%;
+  min-width: 50px;
 }
 
 .container .page-content .table-wrap table td a {

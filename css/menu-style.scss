@@ -284,6 +284,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                                 background-repeat: no-repeat;
                                 background-size: contain;
                             }
+                            &.icon-shopping {
+                                background: url(./../img/icon-shopping-a.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                            }
                         }
                         .hidden-menu {
                             max-height: 500px;
@@ -386,6 +392,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                         }
                         &.icon-users {
                             background: url(./../img/icon-users.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                        &.icon-shopping {
+                            background: url(./../img/icon-shopping.svg);
                             background-position: center;
                             background-repeat: no-repeat;
                             background-size: contain;
@@ -501,7 +513,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
     .filter-wrapper {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: flex-start;
         flex-wrap: wrap;
         margin-left: -10px;
@@ -542,6 +554,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
             margin-top: 20px;
             margin-left: 10px;
             margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             h6 {
                 font-family: $fontpage;
                 font-style: normal;
@@ -555,7 +570,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
                 border-bottom: 1px solid #BEBEBE;
             }
             .f-name-height {
-               min-height: 55px;
                display: flex;
                align-items: center; 
             }

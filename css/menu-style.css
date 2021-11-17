@@ -377,6 +377,14 @@ body {
           background-size: contain;
 }
 
+.container .sidebar .menu ul li.active .icon.icon-shopping {
+  background: url(./../img/icon-shopping-a.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
 .container .sidebar .menu ul li.active .hidden-menu {
   max-height: 500px;
 }
@@ -505,6 +513,14 @@ body {
 
 .container .sidebar .menu ul li .icon.icon-users {
   background: url(./../img/icon-users.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.container .sidebar .menu ul li .icon.icon-shopping {
+  background: url(./../img/icon-shopping.svg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
@@ -646,10 +662,10 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -705,6 +721,19 @@ body {
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .page-content .filter-wrapper .box h6 {
@@ -721,7 +750,6 @@ body {
 }
 
 .page-content .filter-wrapper .box .f-name-height {
-  min-height: 55px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

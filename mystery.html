@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reStore</title>
     <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
-    <link href="./css/select2.min.css" rel="stylesheet" />
     <link href="./css/menu-style.css?87987" rel="stylesheet">
-    <link href="./css/style.css?87987" rel="stylesheet">
+    <link href="./css/style.css?3674635647" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 </head>
 
@@ -112,13 +111,13 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="./users.html">
                                     <div class="icon icon-users"></div>
                                     Пользователи
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="./mystery.html">
                                     <div class="icon icon-shopping"></div>
                                     Mystery shopping
@@ -159,195 +158,200 @@
                         </div>
                     </div>
                     <div class="page-header">
-                        Пользователи
+                        Mystery shopping
                     </div>
+                    <form action="#" method="get" data-pjax="1">
+                        <div class="filter-wrapper">
+                            <!-- блок выбора расположения -->
+                            <div class="box">
+                                <h6>Территориальный </h6>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Все</option>
+                                        <option value="1">Территориальный 1</option>
+                                        <option value="2">Территориальный 2</option>
+                                    </select>
+                        
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <!-- блок выбора даты -->
+                            <div class="box box-date">
+                                <h6>Дата доставки</h6>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="13-04-2021 - 13-05-2021">
+                                    <div class="help-block"></div>
+                                </div>
+                            </div>
+                            <input type="hidden" value="" />
+                        </div>
+                    </form>
                 </div>
-                <div class="users-btns-wrap">
-                    <a href="./users-create.html" class="btn-user">Добавить пользователя</a>
-                    <a href="#" class="btn-user">Сбросить фильтры</a>
+                <div class="search-row">
+                    <div class="search-wrap">
+                    </div>
+                    <a href="#" class="unload-wrap">
+                        <div class="icon">
+                        </div>
+                        <div class="text">
+                            <div class="big-text">
+                                Выгрузка
+                            </div>
+                            <div class="small-text">
+                                Скачать файл
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="table-wrap">
-                    <div class="table-responsive users-table">
+                <div class="table-wrap mystery-wrap">
+                    <div class="table-responsive">
                         <table>
                             <thead>
                                 <tr>
-                                    <th>
-                                        Логин
-                                    </th>
-                                    <th>
-                                        Пароль
-                                    </th>
-                                    <th>
-                                        ФИО сотрудника
-                                    </th>
-                                    <th>
-                                        Права доступа
-                                    </th>
-                                    <th class="long-col">
-                                        Для какого опроса
-                                    </th>
-                                    <th>
-                                        E-mail
-                                    </th>
-                                    <th>
-                                        Телефон
-                                    </th>
-                                    <th>
-                                    </th>
+                                    <th>5</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th colspan="3"></th>
+                                    <th>3.125</th>
+                                    <th>4.26</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">№ Анкеты</th>
+                                    <th rowspan="2" class="long-col">ФИО Тайного покупателя</th>
+                                    <th rowspan="2" class="long-col">Фирмы/Банки</th>
+                                    <th colspan="3">Результат опроса</th>
+                                    <th colspan="2">Баллы по анкете</th>
+                                </tr>
+                                <tr>
+                                   <!-- <th class="td-green">Верно</th>
+                                   <th class="td-yellow">Не полностью</th>
+                                   <th class="td-red">Не верно</th> -->
+                                   <th>Верно</th>
+                                   <th>Не полностью</th>
+                                   <th>Не верно</th>
+                                   <th>Сумма</th>
+                                   <th>Среднее</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr  class="filter-row">
+                                <tr>
+                                    <td>1</td>
                                     <td>
-                                        <input type="text" placeholder="Введите Логин">
+                                        Морозов Александр Юрьевич
                                     </td>
                                     <td>
-                                        <input type="text" placeholder="Введите пароль">
+                                        re:Store Москва
+                                        Рио Ленинский
                                     </td>
-                                    <td>
-                                        <input type="text" placeholder="Фио сотрудника">
+                                    <td  class="td-red">
+                                        0
                                     </td>
-                                    <td>
-                                        <select class="select2-single">
-                                            <option value="" selected>Все</option>
-                                            <option value="логисты">логисты</option>
-                                            <option value="Директор интернет-магазина">Директор интернет-магазина</option>
-                                            <option value="Руководитель по клиентскому опыту, директор направления">
-                                                Руководитель по клиентскому опыту, директор направления
-                                            </option>
-                                            <option value="Cпециалист по контролю качества обслуживания">
-                                                Cпециалист по контролю качества обслуживания
-                                            </option>
-                                        </select>
+                                    <td  class="td-red">
+                                        4
                                     </td>
-                                    <td>
-                                        <select class="select2-single">
-                                            <option value="">Все</option>
-                                            <option value="Опрос розница">Опрос розница</option>
-                                            <option value="Опрос доставка">Опрос доставка</option>
-                                            <option value="Опрос b2b">Опрос b2b</option>
-                                            <option value="Опрос  АСЦ">Опрос  АСЦ</option>
-                                        </select>
+                                    <td class="td-green">
+                                        9
                                     </td>
-                                    <td>
-                                        <input type="text" placeholder="Введите email">
-                                    </td>
-                                    <td>
-                                        <input type="text" placeholder="Введите телефон">
-                                    </td>
-                                    <td></td>
+                                    <td>10</td>
+                                    <td>5</td>
                                 </tr>
                                 <tr>
+                                    <td>2</td>
                                     <td>
-                                        Admin
+                                        Морозов Александр Юрьевич
                                     </td>
                                     <td>
-                                        ertyuiop
+                                        re:Store Москва
+                                        Рио Ленинский
                                     </td>
-                                    <td>
-                                        Иванов Иван
+                                    <td  class="td-yellow">
+                                        7
                                     </td>
-                                    <td>
-                                        специалист по контролю качества обслуживания
+                                    <td  class="td-green">
+                                        9
                                     </td>
-                                    <td>
-                                        Опрос доставка
+                                    <td class="td-green">
+                                        9
                                     </td>
-                                    <td>
-                                        email@email.com
-                                    </td>
-                                    <td>0900000000</td>
-                                    <td>
-                                        <div class="edit-wrap">
-                                            <a href="#" class="btn-delete"></a>
-                                            <a href="./users-edit.html" class="btn-edit"></a>
-                                        </div>
-                                    </td>
+                                    <td>20</td>
+                                    <td>1.5</td>
                                 </tr>
                                 <tr>
+                                    <td>3</td>
                                     <td>
-                                        Admin
+                                        Морозов Александр Юрьевич
                                     </td>
                                     <td>
-                                        ertyuiop
+                                        re:Store Москва
+                                        Рио Ленинский
                                     </td>
-                                    <td>
-                                        Иванов Иван
+                                    <td  class="td-red">
+                                        2
                                     </td>
-                                    <td>
-                                        специалист по контролю качества обслуживания
+                                    <td  class="td-green">
+                                        9
                                     </td>
-                                    <td>
-                                        Опрос доставка
+                                    <td class="td-yellow">
+                                        8
                                     </td>
-                                    <td>
-                                        email@email.com
-                                    </td>
-                                    <td>0900000000</td>
-                                    <td>
-                                        <div class="edit-wrap">
-                                            <a href="#" class="btn-delete"></a>
-                                            <a href="./users-edit.html" class="btn-edit"></a>
-                                        </div>
-                                    </td>
+                                    <td>10</td>
+                                    <td>5</td>
                                 </tr>
                                 <tr>
+                                    <td>1</td>
                                     <td>
-                                        Admin
+                                        Морозов Александр Юрьевич
                                     </td>
                                     <td>
-                                        ertyuiop
+                                        re:Store Москва
+                                        Рио Ленинский
                                     </td>
-                                    <td>
-                                        Иванов Иван
+                                    <td  class="td-green">
+                                        10
                                     </td>
-                                    <td>
-                                        специалист по контролю качества обслуживания
+                                    <td  class="td-red">
+                                        2
                                     </td>
-                                    <td>
-                                        Опрос доставка
+                                    <td class="td-red">
+                                        2
                                     </td>
-                                    <td>
-                                        email@email.com
-                                    </td>
-                                    <td>0900000000</td>
-                                    <td>
-                                        <div class="edit-wrap">
-                                            <a href="#" class="btn-delete"></a>
-                                            <a href="./users-edit.html" class="btn-edit"></a>
-                                        </div>
-                                    </td>
+                                    <td>10</td>
+                                    <td>5</td>
                                 </tr>
                                 <tr>
+                                    <td>1</td>
                                     <td>
-                                        Admin
+                                        Морозов Александр Юрьевич
                                     </td>
                                     <td>
-                                        ertyuiop
+                                        re:Store Москва
+                                        Рио Ленинский
                                     </td>
-                                    <td>
-                                        Иванов Иван
+                                    <td  class="td-yellow">
+                                        8
                                     </td>
-                                    <td>
-                                        специалист по контролю качества обслуживания
+                                    <td  class="td-yellow">
+                                        8
                                     </td>
-                                    <td>
-                                        Опрос доставка
+                                    <td class="td-green">
+                                        10
                                     </td>
-                                    <td>
-                                        email@email.com
-                                    </td>
-                                    <td>0900000000</td>
-                                    <td>
-                                        <div class="edit-wrap">
-                                            <a href="#" class="btn-delete"></a>
-                                            <a href="./users-edit.html" class="btn-edit"></a>
-                                        </div>
-                                    </td>
+                                    <td>10</td>
+                                    <td>5</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="pagination-wrap">
+                    <ul class="pagination">
+                        <li class="prev disabled"><span>Назад</span></li>
+                        <li class="active"><a href="#" data-page="0">1</a></li>
+                        <li><a href="#" data-page="1">2</a></li>
+                        <li><a href="#" data-page="2">3</a></li>
+                        <li><a href="#" data-page="3">4</a></li>
+                        <li class="next"><a href="#" data-page="1">Далее</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -359,9 +363,8 @@
         </div>
     </div>
 
-    <script src="./js/script.js?56789"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/moment.js"></script>
-    <script src="./js/select2.min.js"></script>
     <script type="text/javascript" src="./js/daterangepicker.js"></script>
     <script>
         jQuery(function ($) {
