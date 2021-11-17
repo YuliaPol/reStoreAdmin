@@ -1270,6 +1270,13 @@ $maincolor: #FF0079;
                 table {
                     thead {
                         tr {
+                            th {
+                                &:nth-child(1) {
+                                    width: 90px;
+                                    min-width: 90px;
+                                    max-width: 90px;
+                                }
+                            }
                             &:nth-child(1) {
                                 th {
                                     font-weight: bold;
@@ -1285,6 +1292,12 @@ $maincolor: #FF0079;
                                     &[colspan="3"]{
                                         background: rgba(255, 0, 131, 0.15);
                                     }
+                                    &:nth-child(2),
+                                    &:nth-child(3) {
+                                        text-align: left;
+                                        padding-left: 25px;
+                                        padding-right: 25px;
+                                    }
                                 }
                             }
                             &:nth-child(3) {
@@ -1293,8 +1306,8 @@ $maincolor: #FF0079;
                                     font-weight: normal;
                                     font-size: 10px;
                                     line-height: 12px;
-                                    width: 60px;
-                                    min-width: 60px;
+                                    width: 90px;
+                                    min-width: 50px;
                                     border-bottom: none;
                                     padding-top: 8px;
                                     padding-left: 5px;
@@ -1307,38 +1320,11 @@ $maincolor: #FF0079;
                     .td-green {
                         background: #B3FFBB;
                     }
-                    .label-green {
-                        background: #B3FFBB;
-                        box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
-                        border-radius: 3px;
-                        padding: 10px;
-                        display: inline-block;
-                        min-width: 20px;
-                        text-align: center;
-                    }
                     .td-yellow {
                         background: rgba(255, 191, 0, 0.5);
                     }
-                    .label-yellow {
-                        background: rgba(255, 191, 0, 0.5);
-                        box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
-                        border-radius: 3px;
-                        padding: 10px;
-                        display: inline-block;
-                        min-width: 20px;
-                        text-align: center;
-                    }
                     .td-red {
                         background: rgba(255, 134, 134, 0.7);
-                    }
-                    .label-red {
-                        background: rgba(255, 134, 134, 0.7);
-                        box-shadow: inset 0px -1px 4px 1px rgba(0, 0, 0, 0.4);
-                        border-radius: 3px;
-                        padding: 10px;
-                        display: inline-block;
-                        min-width: 20px;
-                        text-align: center;
                     }
                     td {
                         vertical-align: middle;
@@ -1349,6 +1335,10 @@ $maincolor: #FF0079;
                         &:nth-child(8) {
                             padding-left: 7px;
                             padding-right: 7px;
+                        }
+                        &:nth-child(2),
+                        &:nth-child(3) {
+                            text-align: left;
                         }
                     }
                 }
