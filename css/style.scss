@@ -1272,26 +1272,31 @@ $maincolor: #FF0079;
                         tr {
                             th {
                                 &:nth-child(1) {
-                                    width: 90px;
+                                    width: 200px;
                                     min-width: 90px;
-                                    max-width: 90px;
+                                    max-width: 150px;
+                                }
+                            }
+                            .th-pink {
+                                position: relative;
+                                div {
+                                    &::before {
+                                        content: "";
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                        position: absolute;
+                                        top: 0px;
+                                        left: 0px;
+                                        right: -25px;
+                                        bottom: 0px;
+                                        background: rgba(255, 0, 131, 0.15);
+                                    }
                                 }
                             }
                             &:nth-child(1) {
                                 th {
-                                    font-weight: bold;
-                                    min-width: 60px;
-                                }
-                            }
-                            &:nth-child(2) {
-                                th {
-                                    font-weight: normal;
-                                    font-size: 12px;
-                                    line-height: 14px;
                                     border-bottom: none;
-                                    &[colspan="3"]{
-                                        background: rgba(255, 0, 131, 0.15);
-                                    }
+                                    vertical-align: middle;
                                     &:nth-child(2),
                                     &:nth-child(3) {
                                         text-align: left;
@@ -1300,13 +1305,13 @@ $maincolor: #FF0079;
                                     }
                                 }
                             }
-                            &:nth-child(3) {
+                            &:nth-child(2) {
                                 border-bottom: 1px solid #000000;
                                 th {
                                     font-weight: normal;
                                     font-size: 10px;
                                     line-height: 12px;
-                                    width: 90px;
+                                    width: 150px;
                                     min-width: 50px;
                                     border-bottom: none;
                                     padding-top: 8px;
@@ -1318,13 +1323,13 @@ $maincolor: #FF0079;
                         }
                     }
                     .td-green {
-                        background: #B3FFBB;
+                        background: #c8facd;
                     }
                     .td-yellow {
-                        background: rgba(255, 191, 0, 0.5);
+                        background: #f8e5ad;
                     }
                     .td-red {
-                        background: rgba(255, 134, 134, 0.7);
+                        background: #f7c3c3;
                     }
                     td {
                         vertical-align: middle;
