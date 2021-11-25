@@ -1854,8 +1854,27 @@
 .container .common-nps-wrap .projects-wrapper {
   padding: 35px 0px 40px 60px;
   position: absolute;
-  bottom: 40px;
+  top: 0px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
+  padding-bottom: 10%;
 }
 
 .container .common-nps-wrap .projects-wrapper .projects-row-wrapper {
@@ -1977,8 +1996,8 @@
 
 .container .common-nps-wrap .total-nps .circle {
   background: #ed6397;
-  width: 320px;
-  height: 320px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2000,16 +2019,16 @@
 }
 
 .container .common-nps-wrap .total-nps .circle .name {
-  font-size: 32px;
-  line-height: 34px;
+  font-size: 28px;
+  line-height: 32px;
   padding-bottom: 20px;
   font-weight: 700;
   font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
 }
 
 .container .common-nps-wrap .total-nps .circle .point {
-  font-size: 62px;
-  line-height: 64px;
+  font-size: 54px;
+  line-height: 60px;
   font-weight: 700;
   font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
 }
@@ -2545,6 +2564,12 @@
   font-size: 8px;
   line-height: 12px;
   color: #000000;
+}
+
+@media screen and (max-height: 700px) and (min-width: 1200px) {
+  .container .common-nps-wrap .projects-wrapper {
+    padding-bottom: 5%;
+  }
 }
 
 @media screen and (max-width: 1350px) {

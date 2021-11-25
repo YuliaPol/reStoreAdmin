@@ -1579,8 +1579,14 @@ $maincolor: #FF0079;
         .projects-wrapper {
             padding: 35px 0px 40px 60px;
             position: absolute;
-            bottom: 40px;
+            top: 0px;
+            bottom: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
             font-family: $fontpage;
+            padding-bottom: 10%;
             .projects-row-wrapper {
                 display: flex;
                 flex-wrap: wrap;
@@ -1677,23 +1683,23 @@ $maincolor: #FF0079;
             right: 55px;
             .circle {
                 background: #ed6397;
-                width: 320px;
-                height: 320px;
+                width: 280px;
+                height: 280px;
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 .name {
-                    font-size: 32px;
-                    line-height: 34px;
+                    font-size: 28px;
+                    line-height: 32px;
                     padding-bottom: 20px;
                     font-weight: 700;
                     font-family: $fontpage;
                 }
                 .point {
-                    font-size: 62px;
-                    line-height: 64px;
+                    font-size: 54px;
+                    line-height: 60px;
                     font-weight: 700;
                     font-family: $fontpage;
                 }
@@ -2101,6 +2107,15 @@ $maincolor: #FF0079;
         font-size: 8px;
         line-height: 12px;
         color: #000000;
+    }
+}
+@media screen and (max-height: 700px) and (min-width: 1200px) {
+    .container {
+        .common-nps-wrap {
+            .projects-wrapper {
+                padding-bottom: 5%;
+            }
+        }
     }
 }
 @media screen and (max-width: 1350px) {
