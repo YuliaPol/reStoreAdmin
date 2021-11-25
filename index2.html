@@ -123,6 +123,12 @@
                                     Mystery shopping
                                 </a>
                             </li>
+                            <li>
+                                <a href="./common-nps.html">
+                                    <div class="icon icon-nps"></div>
+                                    Общий NPS
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -370,256 +376,137 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    let barChartData = new Array();
+                </script>
                 <div class="box-row">
-                    <div class="box-wrapper bar-wrapper">
+                    <div class="box-wrapper">
                         <h3>Как вы оцениваете доставку товара?</h3>
                         <div class="bar-chart-wrapper">
-                            <div class="bar-chart-box pink-bar">
-                                <div class="bar five-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content pink-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name">Отлично</div>
-                                </div>
-                                <div class="bar five-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content pink-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name">Хорошо</div>
-                                </div>
-                                <div class="bar five-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content pink-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name">Удовлетвор.</div>
-                                </div>
-                                <div class="bar five-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content pink-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name">Плохо</div>
-                                </div>
-                                <div class="bar five-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content pink-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name">Очень плохо</div>
-                                </div>
-                                <div class="y-scale">
-                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number"></span></div>
-                                </div>
+                            <div class="bar-chart-1 bar-chart-box">
                             </div>
                             <script>
-                                let bar1VallArr = [40, 60, 70, 30, 50];
+                                barChartData.push(
+                                    {
+                                        element: '.bar-chart-1', // class for element
+                                        color: '#E8B5CA', //color for bar
+                                        data: [
+                                            {
+                                                progress: 40,
+                                                labelText: "Отлично"
+                                            },
+                                            {
+                                                progress: 60,
+                                                labelText: "Хорошо"
+                                            },
+                                            {
+                                                progress: 70,
+                                                labelText: "Удовлетвор."
+                                            },
+                                            {
+                                                progress: 30,
+                                                labelText: "Плохо"
+                                            },
+                                            {
+                                                progress: 50,
+                                                labelText: "Очень плохо"
+                                            },
+                                        ]
+                                    }
+                                );
                             </script>
                         </div>
                     </div>
                     <div class="box-wrapper">
                         <h3>Курьер приехал в согласованное время доставки?</h3>
                         <div class="bar-chart-wrapper">
-                            <div class="bar-chart-box purple-bar">
-                                <div class="bar three-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content purple-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name purple-bar-name">Да ,день и время соотв.
-                                        указаниям в доставке</div>
-                                </div>
-                                <div class="bar three-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content purple-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name purple-bar-name">Нет, приехал в назнач.
-                                        день, но в другое аремя</div>
-                                </div>
-                                <div class="bar three-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content purple-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name purple-bar-name">Нет, приехал
-                                        в другой день</div>
-                                </div>
-                                <div class="y-scale">
-                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number"></span></div>
-                                </div>
+                            <div class="bar-chart-2 bar-chart-box">
                             </div>
                             <script>
-                                let bar2VallArr = [25, 63, 50];
+                                barChartData.push(
+                                    {
+                                        element: '.bar-chart-2', // class for element
+                                        color: '#ECCCFF', //color for bar
+                                        data: [
+                                            {
+                                                progress: 25,
+                                                labelText: "Да ,день и время соотв. указаниям в доставке"
+                                            },
+                                            {
+                                                progress: 63,
+                                                labelText: "Нет, приехал в назнач. день, но в другое аремя"
+                                            },
+                                            {
+                                                progress: 50,
+                                                labelText: "Нет, приехал в другой день."
+                                            },
+                                        ]
+                                    }
+                                );
                             </script>
                         </div>
                     </div>
                 </div>
                 <div class="box-row">
-                    <div class="box-wrapper bar-wrapper">
+                    <div class="box-wrapper">
                         <h3>Как вы оцениваете сохранность упаковки самого товара?</h3>
                         <div class="bar-chart-wrapper">
-                            <div class="bar-chart-box blue-bar">
-                                <div class="bar four-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content blue-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name blue-bar-name">Все хорошо</div>
-                                </div>
-                                <div class="bar four-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content blue-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name blue-bar-name">Не расспаковывал(а)
-                                        /Покупал(а) не себе</div>
-                                </div>
-                                <div class="bar four-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content blue-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name blue-bar-name">Упаковка в пыли
-                                        /испачкана</div>
-                                </div>
-                                <div class="bar four-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content blue-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name blue-bar-name">Упаковка помята</div>
-                                </div>
-                                <div class="y-scale">
-                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number"></span></div>
-                                </div>
+                            <div class="bar-chart-3 bar-chart-box">
                             </div>
                             <script>
-                                let bar3VallArr = [28, 53, 53, 53];
+                                barChartData.push(
+                                    {
+                                        element: '.bar-chart-3', // class for element
+                                        color: '#8ECEF3', //color for bar
+                                        data: [
+                                            {
+                                                progress: 28,
+                                                labelText: "Все хорошо"
+                                            },
+                                            {
+                                                progress: 53,
+                                                labelText: "Не расспаковывал(а) /Покупал(а) не себе"
+                                            },
+                                            {
+                                                progress: 53,
+                                                labelText: "Упаковка в пыли /испачкана"
+                                            },
+                                            {
+                                                progress: 53,
+                                                labelText: "Упаковка помята"
+                                            },
+                                        ]
+                                    }
+                                );
                             </script>
                         </div>
                     </div>
                     <div class="box-wrapper">
                         <h3>Курьер предупредил ли заранее о своем приезде?</h3>
                         <div class="bar-chart-wrapper">
-                            <div class="bar-chart-box green-bar">
-                                <div class="bar three-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content green-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name green-bar-name">Позвонил не менее
-                                        чем за час</div>
-                                </div>
-                                <div class="bar three-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content green-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name green-bar-name">Курьер позвонил
-                                        только по приезде</div>
-                                </div>
-                                <div class="bar three-el-bar">
-                                    <div class="bar-bg">
-                                        <div class="bar-content green-bar-content">
-                                            <div class="bar-tooltip">
-                                                <p class="tooltip-count"><span class="count-val">72</span>шт</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bar-name green-bar-name">Курьер не предупредил
-                                        о приезде</div>
-                                </div>
-                                <div class="y-scale">
-                                    <div class="scale"><span class="y-scale-number">100 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">90 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">80 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">70 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">60 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">50 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">40 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">30 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">20 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number">10 шт.</span></div>
-                                    <div class="scale"><span class="y-scale-number"></span></div>
-                                </div>
+                            <div class="bar-chart-4 bar-chart-box">
                             </div>
                             <script>
-                                let bar4VallArr = [28, 53, 53];
+                                barChartData.push(
+                                    {
+                                        element: '.bar-chart-4', // class for element
+                                        color: '#83D1CB', //color for bar
+                                        data: [
+                                            {
+                                                progress: 28,
+                                                labelText: "Позвонил не менее чем за час"
+                                            },
+                                            {
+                                                progress: 53,
+                                                labelText: "Курьер позвонил только по приезде"
+                                            },
+                                            {
+                                                progress: 53,
+                                                labelText: "Курьер не предупредил о приезде"
+                                            },
+                                        ]
+                                    }
+                                );
                             </script>
                         </div>
                     </div>

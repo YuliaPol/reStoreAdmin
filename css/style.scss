@@ -567,79 +567,37 @@ $maincolor: #FF0079;
                 margin-top: 20px;
 
                 .bar-chart-box {
-                    width: 90%;
+                    width: 100%;
                     height: 100%;
-                    margin: 0px auto 0px 38px;
                     display: flex;
-                    position: relative;
                     align-items: flex-end;
                     border-radius: 0px 5px 5px 0px;
-
+                    padding-left: 38px;
+                    position: relative;
                     .y-scale {
                         position: absolute;
-                        left: 0;
+                        left: 20px;
                         right: 0;
                         height: 100%;
                         top: 0;
-
+                        bottom: 0px;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
                         .scale {
-                            position: absolute;
+                            position: relative;
                             background: transparent;
                             display: inline-block;
-                            height: 3px;
-                            right: 0px;
-                            left: 0;
+                            height: 10px;
+                            width: 100%;
                             border-bottom: 2px dashed #E0E0E0;
-
-                            &:nth-child(1) {
-                                top: 0;
-                            }
-
-                            &:nth-child(2) {
-                                top: 10%;
-                            }
-
-                            &:nth-child(3) {
-                                top: 20%;
-                            }
-
-                            &:nth-child(4) {
-                                top: 30%;
-                            }
-
-                            &:nth-child(5) {
-                                top: 40%;
-                            }
-
-                            &:nth-child(6) {
-                                top: 50%;
-                            }
-
-                            &:nth-child(7) {
-                                top: 60%;
-                            }
-
-                            &:nth-child(8) {
-                                top: 70%;
-                            }
-
-                            &:nth-child(9) {
-                                top: 80%;
-                            }
-
-                            &:nth-child(10) {
-                                top: 90%;
-                            }
-
-                            &:nth-child(11) {
-                                top: 100%;
-                            }
                         }
-
                         .y-scale-number {
                             position: absolute;
                             left: -40px;
-                            top: -5px;
+                            top: 2px;
                             font-size: 10px;
                             color: #E0E0E0;
                             min-width: 34px;
@@ -657,7 +615,13 @@ $maincolor: #FF0079;
                         padding: 0 8px;
                         border-radius: 5px 5px 0px 0px;
                         z-index: 99;
-
+                        &:hover {
+                            .bar-content {
+                                .bar-tooltip {
+                                    opacity: 1;
+                                }
+                            }
+                        }
                         & .bar-bg {
                             height: 100%;
                             display: flex;
@@ -688,7 +652,6 @@ $maincolor: #FF0079;
                             border-radius: 15px 15px 0px 0px;
                             width: 100%;
                             position: relative;
-
                             .bar-tooltip {
                                 width: 73px;
                                 line-height: 11px;
@@ -701,13 +664,15 @@ $maincolor: #FF0079;
                                 padding: 10px 7px 15px 7px;
                                 position: absolute;
                                 z-index: 999;
-                                left: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
                                 right: 0;
                                 margin: 0 auto;
                                 top: -46px;
                                 transition: .5s;
-                                display: none;
-
+                                opacity: 0;
+                                pointer-events: none;
+                                transition: opacity 0.3s ease-in;
                                 &::after {
                                     content: "";
                                     background: #C9C9C9;
@@ -718,7 +683,6 @@ $maincolor: #FF0079;
                                     position: absolute;
                                     left: 45%;
                                     bottom: -5px;
-                                    -webkit-transform: rotate(223deg);
                                     transform: rotate(223deg);
                                     width: 9px;
                                 }
@@ -748,7 +712,9 @@ $maincolor: #FF0079;
 
                         .bar-name {
                             position: absolute;
-                            bottom: -17px;
+                            bottom: -30px;
+                            padding-top: 5px;
+                            min-height: 30px;
                             left: 0;
                             right: 0;
                             margin: 0 auto;
@@ -776,17 +742,25 @@ $maincolor: #FF0079;
                     }
 
                     .five-el-bar {
-                        width: calc(100% / 5);
+                        width: 50%;
+                        //four element
+                        &:first-child:nth-last-child(5),
+                        &:first-child:nth-last-child(5) ~ .bar {
+                            padding: 0 20px;
+                        }
+                        //three element
+                        &:first-child:nth-last-child(4),
+                        &:first-child:nth-last-child(4) ~ .bar {
+                            padding: 0 20px;
+                        }
                     }
 
                     .three-el-bar {
                         width: calc(100% / 3);
-                        padding: 0 20px;
                     }
 
                     .four-el-bar {
                         width: calc(100% / 4);
-                        padding: 0 20px;
                     }
 
                     .bar:nth-child(12) {
@@ -795,16 +769,6 @@ $maincolor: #FF0079;
                 }
             }
         }
-
-        .bar-wrapper {
-            padding: 0;
-            padding-bottom: 20px;
-
-            h3 {
-                padding: 20px 0px 0px 20px;
-            }
-        }
-
 
         .box-row {
             display: flex;
@@ -1604,6 +1568,138 @@ $maincolor: #FF0079;
     .bar-charts-content {
         padding-bottom: 80px;
     }
+    .common-nps-wrap {
+        background: url(./../img/nps-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height: calc(100vh - 50px);
+        position: relative;
+        .projects-wrapper {
+            padding: 33px 0px 20px 23px;
+            position: absolute;
+            bottom: 40px;
+            font-family: $fontpage;
+            .projects-row-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                .project-box {
+                    width: 220px;
+                    height: 200px;
+                    margin: 30px 20px 25px 0;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    color: #000;
+                    .circle {
+                        width: 125px;
+                        height: 125px;
+                        position: absolute;
+                        top: 50%;
+                        left: 65px;
+                        transform: translateY(-50%);
+                        border-radius: 50%;
+                        z-index: 10;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        padding-top: 20px;
+                    }
+
+                    .green {
+                        background-color: #95D166;
+                    }
+
+                    .yellow {
+                        background-color: #FFC466;
+                    }
+
+                    .red {
+                        background-color: #D64D4D;
+                    }
+
+                    .project-point {
+                        font-size: 32px;
+                        display: inline-block;
+                        text-align: center;
+                    }
+
+
+                    .project-name {
+                        font-weight: 700;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 16px;
+                        padding-bottom: 15px;
+                    }
+
+                }
+
+
+                .one {
+                    margin-top: 10px;
+                    background-image: url(../img/1.svg);
+                }
+
+                .two {
+                    margin-top: 10px;
+                    background-image: url(../img/2.svg);
+                }
+
+                .three {
+                    margin-top: 10px;
+                    background-image: url(../img/3.svg);
+                }
+
+                .four {
+                    background-image: url(../img/4.svg);
+                }
+
+                .five {
+                    background-image: url(../img/5.svg);
+                }
+
+                .six {
+                    background-image: url(../img/6.png);
+                }
+
+                .seven {
+                    background-image: url(../img/7.png);
+                }
+            }
+        }
+        .total-nps {
+            position: absolute;
+            bottom: 75px;
+            right: 55px;
+            .circle {
+                background: #ed6397;
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                .name {
+                    font-size: 32px;
+                    line-height: 34px;
+                    padding-bottom: 20px;
+                    font-weight: 700;
+                    font-family: $fontpage;
+                }
+                .point {
+                    font-size: 62px;
+                    line-height: 64px;
+                    font-weight: 700;
+                    font-family: $fontpage;
+                }
+            }
+        }
+    }
 }
 .select2-container--default {
     .select2-results__options {
@@ -2045,6 +2141,25 @@ $maincolor: #FF0079;
                 }
             }
         }
+        .common-nps-wrap {
+            .projects-wrapper {
+                bottom: 0px;
+            }
+            .total-nps {
+                .circle {
+                    width: 250px;
+                    height: 250px;
+                    .name {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                    .point {
+                        font-size: 50px;
+                        line-height: 54px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -2125,6 +2240,43 @@ $maincolor: #FF0079;
                 }
             }
         }
+        .common-nps-wrap {
+            .projects-wrapper {
+                .projects-row-wrapper {
+                    .project-box {
+                        width: 180px;
+                        height: 150px;
+                        .circle  {
+                            left: 45px;
+                            width: 100px;
+                            height: 100px;
+                            .project-name {
+                                font-size: 13px;
+                                line-height: 16px;
+                                padding-bottom: 10px;
+                            }
+                            .project-point {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .total-nps {
+                .circle {
+                    width: 200px;
+                    height: 200px;
+                    .name {
+                        font-size: 22px;
+                        line-height: 26px;
+                    }
+                    .point {
+                        font-size: 40px;
+                        line-height: 44px;
+                    }
+                }
+            }
+        }
     }
     .pieRound {
         .chart {
@@ -2187,6 +2339,11 @@ $maincolor: #FF0079;
                 }
             }
         }
+        .common-nps-wrap {
+            .projects-wrapper {
+                top: 30px;
+            }
+        }
     }
 }
 
@@ -2217,6 +2374,44 @@ $maincolor: #FF0079;
                             height: 100%;
                             background: rgba(255, 255, 255, 0.6);
                         }
+                    }
+                }
+            }
+        }
+        .common-nps-wrap {
+            .projects-wrapper {
+                .projects-row-wrapper {
+                    .project-box {
+                        width: 120px;
+                        height: 100px;
+                        .circle  {
+                            left: 35px;
+                            width: 75px;
+                            height: 75px;
+                            padding-top: 10px;
+                            .project-name {
+                                font-size: 10px;
+                                line-height: 14px;
+                                padding-bottom: 5px;
+                            }
+                            .project-point {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .total-nps {
+                .circle {
+                    width: 150px;
+                    height: 150px;
+                    .name {
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                    .point {
+                        font-size: 32px;
+                        line-height: 36px;
                     }
                 }
             }
@@ -2272,9 +2467,57 @@ $maincolor: #FF0079;
                 }
             }
         }
+        .common-nps-wrap {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            .projects-wrapper {
+                position: initial;
+            }
+            .total-nps {
+                position: initial;
+                padding-top: 20px;
+            }
+        }
     }
 }
-
+@media screen and (max-width: 500px) {
+    .container {
+        .common-nps-wrap {
+            .projects-wrapper {
+                .projects-row-wrapper {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .project-box {
+                        width: 220px;
+                        height: 200px;
+                        .circle  {
+                            left: 65px;
+                            width: 125px;
+                            height: 125px;
+                            padding-top: 25px;
+                            .project-name {
+                                font-size: 14px;
+                                line-height: 16px;
+                                padding-bottom: 10px;
+                            }
+                            .project-point {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            .total-nps {
+                .circle {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 450px) {
     .container {
         .page-content {

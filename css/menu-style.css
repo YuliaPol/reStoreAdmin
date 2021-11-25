@@ -385,6 +385,14 @@ body {
           background-size: contain;
 }
 
+.container .sidebar .menu ul li.active .icon.icon-nps {
+  background: url(./../img/icon-nps-a.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
 .container .sidebar .menu ul li.active .hidden-menu {
   max-height: 500px;
 }
@@ -521,6 +529,14 @@ body {
 
 .container .sidebar .menu ul li .icon.icon-shopping {
   background: url(./../img/icon-shopping.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+}
+
+.container .sidebar .menu ul li .icon.icon-nps {
+  background: url(./../img/icon-nps.svg);
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;

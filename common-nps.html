@@ -8,8 +8,8 @@
     <title>reStore</title>
     <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
     <link href="./css/select2.min.css" rel="stylesheet" />
-    <link href="./css/menu-style.css?87987" rel="stylesheet">
-    <link href="./css/style.css?87987" rel="stylesheet">
+    <link href="./css/menu-style.css?3735345234" rel="stylesheet">
+    <link href="./css/style.css?63453h" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 </head>
 
@@ -112,7 +112,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="./users.html">
                                     <div class="icon icon-users"></div>
                                     Пользователи
@@ -124,7 +124,7 @@
                                     Mystery shopping
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="./common-nps.html">
                                     <div class="icon icon-nps"></div>
                                     Общий NPS
@@ -137,101 +137,53 @@
         </div>
         <div class="content" id="content">
             <div class="page-content">
-                <div class="pink-block">
-                    <div class="top-nav">
-                        <div class="navbar-aside">
-                            <div class="mobile-menu btn-aside-menu toggle-sidebar">
-                                <div class="b-menu">
-                                    <div class="b-bun b-bun--top"></div>
-                                    <div class="b-bun b-bun--mid"></div>
-                                    <div class="b-bun b-bun--bottom"></div>
-                                  </div>
-                            </div>
+                <div class="common-nps-wrap">
+                    <div class="projects-wrapper">
+                        <div class="projects-row-wrapper">
+                            <a href="#" class="project-box one" data-menu-script="1">
+                                <div class="circle green circle-color">
+                                    <span class="project-name">NPS<br>по рознице</span>
+                                    <span class="project-point point-outlet">95.1%</span>
+                                </div>
+                            </a>
+                            <a href="#" class="project-box two" data-menu-script="2">
+                                <div class="circle green circle-color">
+                                    <span class="project-name">NPS<br> по доставке</span>
+                                    <span class="project-point">89.9%</span>
+                                </div>
+                            </a>
+                            <a href="#" class="project-box three" data-menu-script="3">
+                                <div class="circle red circle-color">
+                                    <span class="project-name">NPS<br> по b2b</span>
+                                    <span class="project-point">62.4%</span>
+                                </div>
+                            </a>
                         </div>
-                        <div class="navbar-user">
-                            <div class="user">
-                                <div class="user-wrapper show-user-dropdown">
-                                    <div class="user-name">Admin</div>
-                                    <div class="icon-user"></div>
+                        <div class="projects-row-wrapper">
+                            <a href="#" class="project-box four" data-menu-script="4">
+                                <div class="circle green circle-color">
+                                    <span class="project-name name-position4">NPS<br> по АСЦ</span>
+                                    <span class="project-point">87.5%</span>
                                 </div>
-                                <div class="dropdown-user">
-                                    <ul>
-                                        <li>
-                                            <a href="#" class="logout">Выход </a>
-                                        </li>
-                                    </ul>
+                            </a>
+                            <a href="#" class="project-box five" data-menu-script="8">
+                                <div class="circle yellow circle-color">
+                                    <span class="project-name name-position5">NPS<br> пользователи</span>
+                                    <span class="project-point">82.8%</span>
                                 </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="total-nps">
+                        <div class="circle">
+                            <div class="name">
+                                Общий NPS
+                            </div>
+                            <div class="point">
+                                83.54%
                             </div>
                         </div>
                     </div>
-                    <div class="page-header">
-                        Пользователи / Редактирование пользователя
-                    </div>
-                </div>
-                <div class="form-wrapper">
-                    <form action="#">
-                        <div class="form-header">
-                            Редактирование пользователя
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Введите Логин</div>
-                            <input type="text" name="q-1" value="Admin">
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Введите пароль</div>
-                            <input type="text" name="q-2" value="dtfghj">
-                        </div>
-                        <div class="form-group">
-                            <div class="label">ФИО сотрудника</div>
-                            <input type="text" name="q-3" value="Иванов Иван">
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Права доступа</div>
-                            <select name="q-4" class="select2-single">
-                                <option value="логисты">логисты</option>
-                                <option value="Директор интернет-магазина">Директор интернет-магазина</option>
-                                <option selected value="Руководитель по клиентскому опыту, директор направления">
-                                    Руководитель по клиентскому опыту, директор направления
-                                </option>
-                                <option value="Cпециалист по контролю качества обслуживания">
-                                    Cпециалист по контролю качества обслуживания
-                                </option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Выбор для какого опроса</div>
-                            <select name="q-5" class="select2-single">
-                                <option value="Опрос розница">Опрос розница</option>
-                                <option value="Опрос доставка">Опрос доставка</option>
-                                <option selected value="Опрос b2b">Опрос b2b</option>
-                                <option value="Опрос  АСЦ">Опрос  АСЦ</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Введите email</div>
-                            <input type="email" name="q-6" value="email@email.com">
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Введите телефон</div>
-                            <input type="text" name="q-7" value="0900000000">
-                        </div>
-                        <div class="form-group">
-                            <div class="label">Ответственный сотрудник</div>
-                            <select name="q-8" class="select2-single">
-                                <option value="управляющий">управляющий</option>
-                                <option selected value="зам. управляющего">зам. управляющего</option>
-                            </select>
-                        </div>
-                        <div class="form-group check-group">
-                            <label>
-                                <input type="checkbox" name="q-9" checked>
-                                Активен
-                            </label>
-                        </div>
-                        <div class="btn-wrap">
-                            <button class="btn-default">Отправить</button>
-                        </div>
-                    </form>                        
                 </div>
             </div>
         </div>
