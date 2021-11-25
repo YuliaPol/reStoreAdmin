@@ -1852,7 +1852,7 @@
 }
 
 .container .common-nps-wrap .projects-wrapper {
-  padding: 33px 0px 20px 23px;
+  padding: 35px 0px 40px 60px;
   position: absolute;
   bottom: 40px;
   font-family: "Graphik LCG", "Helvetica Neue", Arial, sans-serif;
@@ -1931,9 +1931,9 @@
 }
 
 .container .common-nps-wrap .projects-wrapper .projects-row-wrapper .project-box .project-name {
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   padding-bottom: 15px;
 }
@@ -2623,6 +2623,9 @@
     width: 30px;
     height: 30px;
   }
+  .container .common-nps-wrap .projects-wrapper {
+    padding-left: 40px;
+  }
   .container .common-nps-wrap .projects-wrapper .projects-row-wrapper .project-box {
     width: 180px;
     height: 150px;
@@ -2633,8 +2636,8 @@
     height: 100px;
   }
   .container .common-nps-wrap .projects-wrapper .projects-row-wrapper .project-box .circle .project-name {
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 11px;
+    line-height: 14px;
     padding-bottom: 10px;
   }
   .container .common-nps-wrap .projects-wrapper .projects-row-wrapper .project-box .circle .project-point {
@@ -2721,6 +2724,9 @@
     height: 100%;
     background: rgba(255, 255, 255, 0.6);
   }
+  .container .common-nps-wrap .projects-wrapper {
+    padding-left: 20px;
+  }
   .container .common-nps-wrap .projects-wrapper .projects-row-wrapper .project-box {
     width: 120px;
     height: 100px;
@@ -2732,7 +2738,7 @@
     padding-top: 10px;
   }
   .container .common-nps-wrap .projects-wrapper .projects-row-wrapper .project-box .circle .project-name {
-    font-size: 10px;
+    font-size: 9px;
     line-height: 14px;
     padding-bottom: 5px;
   }

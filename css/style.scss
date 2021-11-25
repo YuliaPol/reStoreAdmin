@@ -1577,7 +1577,7 @@ $maincolor: #FF0079;
         min-height: calc(100vh - 50px);
         position: relative;
         .projects-wrapper {
-            padding: 33px 0px 20px 23px;
+            padding: 35px 0px 40px 60px;
             position: absolute;
             bottom: 40px;
             font-family: $fontpage;
@@ -1629,9 +1629,9 @@ $maincolor: #FF0079;
 
 
                     .project-name {
-                        font-weight: 700;
+                        font-weight: 800;
                         text-align: center;
-                        font-size: 16px;
+                        font-size: 14px;
                         line-height: 16px;
                         padding-bottom: 15px;
                     }
@@ -2242,6 +2242,7 @@ $maincolor: #FF0079;
         }
         .common-nps-wrap {
             .projects-wrapper {
+                padding-left: 40px;
                 .projects-row-wrapper {
                     .project-box {
                         width: 180px;
@@ -2251,8 +2252,8 @@ $maincolor: #FF0079;
                             width: 100px;
                             height: 100px;
                             .project-name {
-                                font-size: 13px;
-                                line-height: 16px;
+                                font-size: 11px;
+                                line-height: 14px;
                                 padding-bottom: 10px;
                             }
                             .project-point {
@@ -2380,6 +2381,7 @@ $maincolor: #FF0079;
         }
         .common-nps-wrap {
             .projects-wrapper {
+                padding-left: 20px;
                 .projects-row-wrapper {
                     .project-box {
                         width: 120px;
@@ -2390,7 +2392,7 @@ $maincolor: #FF0079;
                             height: 75px;
                             padding-top: 10px;
                             .project-name {
-                                font-size: 10px;
+                                font-size: 9px;
                                 line-height: 14px;
                                 padding-bottom: 5px;
                             }
