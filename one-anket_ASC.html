@@ -252,16 +252,79 @@
                     <div class="btn-wrapper complete-btn-wrapper">
                         <button type="button" class="anket-btn">Завершить выполнение</button>
                     </div>
-                    <div class="comment-container">
+                    <div class="comment-container" style="display: block">
+                        <div class="btns-row">
+                            <div class="btn-wrapper accepted" data-mode="accepted">
+                                <button type="button" class="anket-btn">Принять</button>
+                            </div>
+                            <div class="btn-wrapper revision" data-mode="revision">
+                                <button type="button" class="anket-btn">На доработку</button>
+                            </div>
+                        </div>
+                        <div class="revision-comment" style="display: block">
+                            <p>Комментарий</p>
+                            <textarea class="comment-field" name="revision-comment" id="delivery-update-form"></textarea>
+                        </div>
+                        <div class="btn-wrapper confirmation-send">
+                            <button type="button" class="anket-btn">Отправить</button>
+                        </div>
+                    </div>
+                    <!-- <div class="comment-container">
+                        <div class="btn-wrapper accepted" data-mode="accepted" style="display: block">
+                            <button type="button" class="anket-btn">Принять</button>
+                        </div>
+                        <div class="btn-wrapper revision" data-mode="revision" style="display: block">
+                            <button type="button" class="anket-btn">На доработку</button>
+                        </div>
                         <p>Уважаемый Иван!</p>
                         <textarea class="comment-field" name="" id=""></textarea>
                         <span class="comment-error">Поле обязательно к заполнению</span>
                         <div class="send-btn-wrp">
                             <button type="submit" class="send-btn">Отправить</button>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="alert-history-container">
                         <p class="answer-title">История обработки Алерта</p>
+                        <div class="history-group">
+                            <div class="history-item">
+                                <p class="history-item-name">Время события:</p>
+                                <p class="history-item-data">05-10-2021 12:00:32</p>
+                            </div>
+                            <div class="history-item">
+                                <p class="history-item-name">ФИО:</p>
+                                <p class="history-item-data">Синцова Татьяна</p>
+                            </div>
+                            <div class="history-item">
+                                <p class="history-item-name">Действие:</p>
+                                <p class="history-item-data">Взял в работу</p>
+                            </div>
+                            <div class="history-item">
+                                <p class="history-item-name">Комментарий о выполненой работе:</p>
+                                <p class="history-item-data alert-comment">Спасибо, что приняли участие в опросе об уровне
+                                    нашего сервиса. Мы всегда стремимся к высокому уровню обслуживания клиентов и нам очень
+                                    жаль, что вы не увидели заинтересованности от наших сотрудников</p>
+                            </div>
+                        </div>
+                        <div class="history-group">
+                            <div class="history-item">
+                                <p class="history-item-name">Время события:</p>
+                                <p class="history-item-data">05-10-2021 12:00:32</p>
+                            </div>
+                            <div class="history-item">
+                                <p class="history-item-name">ФИО:</p>
+                                <p class="history-item-data">Синцова Татьяна</p>
+                            </div>
+                            <div class="history-item">
+                                <p class="history-item-name">Действие:</p>
+                                <p class="history-item-data">Взял в работу</p>
+                            </div>
+                            <div class="history-item">
+                                <p class="history-item-name">Комментарий о выполненой работе:</p>
+                                <p class="history-item-data alert-comment">Спасибо, что приняли участие в опросе об уровне
+                                    нашего сервиса. Мы всегда стремимся к высокому уровню обслуживания клиентов и нам очень
+                                    жаль, что вы не увидели заинтересованности от наших сотрудников</p>
+                            </div>
+                        </div>
                         <div class="history-item">
                             <p class="history-item-name">Время события:</p>
                             <p class="history-item-data">05-10-2021 12:00:32</p>
